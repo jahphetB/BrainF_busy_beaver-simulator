@@ -121,6 +121,19 @@ arithmetic command and `]`. Thus both execute `1 + 1 + 255 * 2 = 512`
 instructions and halt with an empty output, pointer zero, and tape `[0]`.
 At 511 steps the cell is already zero but the closing bracket has not executed.
 
+## Phase 3 cell-width sensitivity model
+
+The optional `u4-right-v1` model changes only cell width from eight to four bits.
+Values wrap modulo 16, input bytes are reduced modulo 16, and output still emits
+one byte per `.` (values 0-15). Pointer boundaries, tape growth, EOF-zero behavior,
+loop transitions, step counting and outcome equivalence stay unchanged. The
+primary `legacy-u8-right-v1` model remains the default. Never combine records
+from the two models into one length-only maximum.
+
+For the two wrapping loops, the same derivation gives
+`1 + 1 + (2^b - 1) * 2 = 2^(b+1)` instructions: 32 at four bits and 512 at eight.
+This is cell-memory semantics sensitivity, not a change to a tape resource cap.
+
 ## Reference
 
 [Daniel B. Cristofani's Brainfuck reference](https://brainfuck.org/brainfuck.html)

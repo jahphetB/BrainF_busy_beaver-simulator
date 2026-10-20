@@ -3,7 +3,7 @@
 from collections.abc import Callable
 from time import monotonic
 
-from .config import ExecutionLimits, validate_integer
+from .config import ExecutionLimits, validate_cell_bits, validate_integer
 from .models import ExecutionResult, State, Status, TraceStep
 from .syntax import ProgramSyntaxError, build_bracket_map
 
@@ -13,7 +13,7 @@ def validate_max_steps(max_steps: int) -> None:
 
 
 class _Machine:
-	def __init__(self, program: str, brackets: dict[int, int], input_data: bytes):
+	def __init__(self, program: str, brackets: dict[int, int], input_data: bytes, cell_bits: int):
 		self.program = program
 		self.brackets = brackets
 		self.input_data = input_data
@@ -23,6 +23,7 @@ class _Machine:
 		self.input_pos = 0
 		self.output = bytearray()
 		self.steps = 0
+		self.modulus = 1 << cell_bits
 
 	def snapshot(self) -> State:
 		return State(self.ip, self.pointer, tuple(self.tape), self.input_pos, bytes(self.output), self.steps)
@@ -39,14 +40,14 @@ class _Machine:
 		elif command == "<":
 			self.pointer = max(0, self.pointer - 1)
 		elif command == "+":
-			self.tape[self.pointer] = (self.tape[self.pointer] + 1) % 256
+			self.tape[self.pointer] = (self.tape[self.pointer] + 1) % self.modulus
 		elif command == "-":
-			self.tape[self.pointer] = (self.tape[self.pointer] - 1) % 256
+			self.tape[self.pointer] = (self.tape[self.pointer] - 1) % self.modulus
 		elif command == ".":
 			self.output.append(self.tape[self.pointer])
 		elif command == ",":
 			if self.input_pos < len(self.input_data):
-				self.tape[self.pointer] = self.input_data[self.input_pos]
+				self.tape[self.pointer] = self.input_data[self.input_pos] % self.modulus
 				self.input_pos += 1
 			else:
 				self.tape[self.pointer] = 0
@@ -65,6 +66,7 @@ def run_program(
 	*,
 	trace: Callable[[TraceStep], None] | None = None,
 	limits: ExecutionLimits | None = None,
+	cell_bits: int = 8,
 ) -> ExecutionResult:
 	"""Execute with a finite budget and exact repeated-state detection.
 
@@ -72,6 +74,7 @@ def run_program(
 	Trace callbacks receive immutable before/after snapshots per instruction.
 	"""
 	validate_max_steps(max_steps)
+	validate_cell_bits(cell_bits)
 	if limits is not None and not isinstance(limits, ExecutionLimits):
 		raise TypeError("limits must be ExecutionLimits or None")
 	if not isinstance(input_data, bytes):
@@ -80,7 +83,7 @@ def run_program(
 		brackets = build_bracket_map(program)
 	except ProgramSyntaxError as error:
 		return ExecutionResult(program, Status.INVALID, State(), error=str(error))
-	machine = _Machine(program, brackets, input_data)
+	machine = _Machine(program, brackets, input_data, cell_bits)
 	seen = {}
 	state_bytes = 0
 	# Without brackets the instruction pointer strictly increases: no cycle is possible.

@@ -19,6 +19,9 @@ def print_trace_step(event: TraceStep) -> None:
 
 def main(argv=None) -> int:
 	argv = list(sys.argv[1:] if argv is None else argv)
+	if argv and argv[0] == "dataset":
+		from .dataset_cli import main as dataset_main
+		return dataset_main(argv[1:])
 	if argv and argv[0] == "experiment":
 		from .experiment_cli import main as experiment_main
 		return experiment_main(argv[1:])

@@ -15,6 +15,7 @@ def main(argv=None):
 	parser.add_argument("--config", type=Path, help="JSON configuration; cannot be combined with budget flags")
 	parser.add_argument("--lengths", type=int, nargs="+")
 	parser.add_argument("--max-steps", type=int)
+	parser.add_argument("--cell-bits", type=int, choices=(4, 8))
 	coverage = parser.add_mutually_exclusive_group()
 	coverage.add_argument("--max-programs", type=int, help="Candidate budget per length; default 10000")
 	coverage.add_argument("--exhaustive", action="store_true", help="Remove candidate cap; other limits still apply")
@@ -33,7 +34,7 @@ def main(argv=None):
 	args = parser.parse_args(argv)
 	try:
 		values = {}
-		for name in ("lengths", "max_steps", "max_seconds", "max_distinct_outcomes", "max_outcome_bytes"):
+		for name in ("lengths", "cell_bits", "max_steps", "max_seconds", "max_distinct_outcomes", "max_outcome_bytes"):
 			if getattr(args, name) is not None:
 				values[name] = getattr(args, name)
 		if args.max_programs is not None:

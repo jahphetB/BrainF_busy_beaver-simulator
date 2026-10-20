@@ -5,7 +5,7 @@ from time import monotonic
 
 from . import SEMANTICS_ID, __version__
 from .analysis import StreamingSummary
-from .config import BaselineConfig, ExperimentConfig
+from .config import BaselineConfig, ExperimentConfig, semantics_id
 from .enumeration import enumerate_programs, length_four_programs, valid_program_count
 from .interpreter import run_program
 
@@ -55,7 +55,7 @@ def run_experiment(config: ExperimentConfig, *, on_result=None) -> dict:
 				break
 			seconds = min(remaining, config.limits.max_seconds) if config.limits.max_seconds is not None else remaining
 			limits = replace(config.limits, max_seconds=seconds)
-			result = run_program(program, config.max_steps, limits=limits)
+			result = run_program(program, config.max_steps, limits=limits, cell_bits=config.cell_bits)
 			storage_stop = accumulator.observe(result)
 			if on_result is not None:
 				on_result(result)
@@ -84,7 +84,7 @@ def run_experiment(config: ExperimentConfig, *, on_result=None) -> dict:
 	return {
 		"schema_version": 2,
 		"engine_version": __version__,
-		"semantics_id": SEMANTICS_ID,
+		"semantics_id": semantics_id(config.cell_bits),
 		"enumeration": "alphabet_order_prefix",
 		"input_bytes": [],
 		"config": config.to_dict(),

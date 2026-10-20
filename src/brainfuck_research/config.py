@@ -42,6 +42,7 @@ class BaselineConfig:
 @dataclass(frozen=True)
 class ExperimentConfig:
 	lengths: tuple[int, ...] = (1, 2, 3, 4)
+	cell_bits: int = 8
 	max_steps: int = 512
 	max_programs_per_length: int | None = 10000
 	max_seconds: float = 30.0
@@ -50,6 +51,7 @@ class ExperimentConfig:
 	limits: ExecutionLimits = field(default_factory=ExecutionLimits)
 
 	def __post_init__(self):
+		validate_cell_bits(self.cell_bits)
 		if not isinstance(self.lengths, tuple) or not self.lengths:
 			raise ValueError("lengths must be a nonempty tuple")
 		for length in self.lengths:
@@ -78,3 +80,14 @@ class ExperimentConfig:
 		if "limits" in values:
 			values["limits"] = ExecutionLimits(**values["limits"])
 		return cls(**values)
+
+
+def validate_cell_bits(cell_bits):
+	validate_integer("cell_bits", cell_bits, 1)
+	if cell_bits not in (4, 8):
+		raise ValueError("Supported cell widths are 4 and 8 bits")
+
+
+def semantics_id(cell_bits=8):
+	validate_cell_bits(cell_bits)
+	return "legacy-u8-right-v1" if cell_bits == 8 else "u4-right-v1"
