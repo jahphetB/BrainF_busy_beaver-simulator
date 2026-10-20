@@ -1,0 +1,41 @@
+{
+	"pages": 8,
+	"render_engine": "PDFium (Poppler unavailable on host)",
+	"packages": {
+		"matplotlib": "3.11.2",
+		"reportlab": "5.0.1",
+		"pypdf": "6.21.1",
+		"pypdfium2": "5.14.0"
+	},
+	"page_text_characters": [
+		3042,
+		3232,
+		3152,
+		1795,
+		2071,
+		2696,
+		3382,
+		2634
+	],
+	"artifacts_sha256": {
+		"paper/report.md": "67a016407eb15f469affb3f4b6287b80a270507ace007f0ea8b8625abd776e02",
+		"paper/references.bib": "a5ab2d4243f7fd3df3f84149489f0f39204ceaa68afc2dc99c43ffe805c61f92",
+		"paper/LITERATURE_AUDIT.md": "0567a648bb414bb7a61a13f8e9ff2f8067f53105c33c6c6a349012a41c59dc20",
+		"paper/statistics.json": "8edca8191801b791efd3356f9b45bd3bfbe465d61c107e50d3bc3833f138716e",
+		"paper/make_figures.py": "ffed11ec286ceeb6060f73a5d56347582e2d50dd220d12454962a48bcb0d26bc",
+		"paper/build_paper.py": "985a96929e4d8bc98ef092fa4b1e84565b7db9c038004b73782944f9f544cd1f",
+		"paper/verify_paper.py": "6579e05e9bbcbed198d9b7fb0dce46db399af301b4c05adc810fa22fc6c5cc1b",
+		"paper/requirements.txt": "568128a67a344afa30fb28df7f37b87b9aff0085386cf453ae0afb833f4e90f4",
+		"paper/brainfuck-productivity.pdf": "69b281b7a790af340ca5426dc81643a9a1bf12f0617a0f143783f4d41b897466",
+		"paper/figures/01-records.pdf": "92ab33dfe71309e0c6d1159eb85bd74f1b23020642e57d2a933787bac9c1d1f8",
+		"paper/figures/01-records.png": "91c4cb3811ae05f2a0431b222adbbbd77eaec66a0a8498d8427fcc982345c05e",
+		"paper/figures/01-records.svg": "32b5d00cefeb85c89733237af888f338784aff13583bbf0fb0fe7fb7769ee243",
+		"paper/figures/02-runtime-output.pdf": "6feb854ddfd975db17b12e537f567c7bef9116e6e58d07123a34068f67edf58d",
+		"paper/figures/02-runtime-output.png": "0ab60a67a59b0adb720604bb27126662e2c0d83846781465a0226c68dbc94d79",
+		"paper/figures/02-runtime-output.svg": "ec19b7e94dee3b308f03f6e5b467a438bf10b6aa7a18003b07a73bba9287fbba",
+		"paper/figures/03-memory-outcomes.pdf": "dd1705044b4e195703cc996b9e584a15296aba3eb22d069de2f7db04a51f43b8",
+		"paper/figures/03-memory-outcomes.png": "7c1f074b61aca8ca16a8b6460e5aee64ff740c3e3eac33d5260d171e523f7e62",
+		"paper/figures/03-memory-outcomes.svg": "e5aabaa1627dff71f81ef4d39e157d1937e0c349b353fa33a3fbe1e2abcf5ee6"
+	},
+	"note": "Build and hash record; visual review is documented separately in docs/PHASE_4.md."
+}

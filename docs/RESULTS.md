@@ -170,7 +170,16 @@ cross-checks reduce implementation risk but are not formal verification. Data
 integrity verification is distinct from independently rerunning all executions.
 
 These are reproduced baseline findings and newly measured observations in this
-repository. Their originality relative to prior research is **not established**.
-Literature comparison, deeper statistical analysis, and academic contribution
-assessment belong to Phase 4. No exact Kolmogorov complexity or compression
-improvement is inferred.
+repository. The completed [Phase 4 paper](../paper/report.md) compares them with
+verified prior Brainfuck enumeration and Busy Beaver work. The defensible
+contribution is a reproducible empirical artifact, with explicit semantics,
+paired comparisons and preserved uncertainty. Research priority or a new record
+is **not established**. No exact Kolmogorov complexity or compression improvement
+is inferred. See the [literature audit](../paper/LITERATURE_AUDIT.md).
+
+Phase 4's complete distribution analysis additionally finds that 9634/9670
+(99.63%) and 63641/64077 (99.32%) observed halted programs finish within their
+source length in instructions at lengths five/six, respectively (8-bit, B=4096).
+These are descriptive fractions conditional on observed halting. They are not
+eventual halting probabilities or evidence resolving the remaining programs.
+The reproducible calculation is in [paper/statistics.json](../paper/statistics.json).

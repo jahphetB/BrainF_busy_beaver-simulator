@@ -7,10 +7,24 @@ and memory under explicitly defined semantics. It extends the original
 length-four experiment. It does not solve the classical Busy Beaver problem or
 compute exact Kolmogorov complexity.
 
-**Status:** Phases 1-3 are complete. Versioned research datasets cover every
+**Status:** Phases 1-4 are complete. Versioned research datasets cover every
 candidate through length six, with explicit unresolved cases and sensitivity
 comparisons. The engine supports bounded enumeration through length seven.
-The research paper and interactive website remain later phases.
+The eight-page research paper is available below. Phase 5, the interactive
+website, awaits approval.
+
+## Research paper
+
+Read the [eight-page PDF](paper/brainfuck-productivity.pdf) or
+[editable Markdown](paper/report.md). Three figures are available as vector
+SVG/PDF and 300-dpi PNG, with [reproduction instructions](paper/README.md),
+[verified bibliography](paper/references.bib) and
+[literature comparison](paper/LITERATURE_AUDIT.md).
+
+The paper examines cutoff censoring, runtime/output differences, cell-width
+sensitivity, memory and outcome equivalence. Its contribution is a reproducible
+empirical artifact; research priority and new Busy Beaver records are not
+established. See the [Phase 4 completion record](docs/PHASE_4.md).
 
 ## Run the validated baseline
 

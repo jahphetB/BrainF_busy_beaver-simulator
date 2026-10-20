@@ -4,8 +4,9 @@ Each phase has three task groups and requires approval before the next phase.
 Make at least two focused commits per phase and push completed work. Use tabs
 for new code, keep research and presentation separate, and report real checks.
 
-Phases 1-3 are implemented and verified. Phase 4 awaits approval. Completion
-records: [Phase 1](PHASE_1.md), [Phase 2](PHASE_2.md), [Phase 3](PHASE_3.md).
+Phases 1-4 are implemented and verified. Phase 5 awaits approval. Completion
+records: [Phase 1](PHASE_1.md), [Phase 2](PHASE_2.md), [Phase 3](PHASE_3.md),
+[Phase 4](PHASE_4.md).
 
 | Phase | Task groups | Completion evidence |
 | --- | --- | --- |
