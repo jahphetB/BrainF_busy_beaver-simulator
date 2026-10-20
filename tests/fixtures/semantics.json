@@ -1,0 +1,25 @@
+{
+	"schema_version": 1,
+	"semantics_id": "legacy-u8-right-v1",
+	"provenance": "Hand-derived cases, not generated expected values; shared with the future JavaScript interpreter.",
+	"cases": [
+		{"name": "empty_zero_budget", "program": "", "max_steps": 0, "input_bytes": [], "expected": {"status": "halted", "steps": 0, "ip": 0, "pointer": 0, "tape": [0], "output_bytes": [], "input_pos": 0}},
+		{"name": "nonempty_zero_budget", "program": "+", "max_steps": 0, "input_bytes": [], "expected": {"status": "step_limit", "steps": 0, "ip": 0, "pointer": 0, "tape": [0], "output_bytes": [], "input_pos": 0}},
+		{"name": "clamped_left_boundary", "program": "<+.", "max_steps": 3, "input_bytes": [], "expected": {"status": "halted", "steps": 3, "ip": 3, "pointer": 0, "tape": [1], "output_bytes": [1], "input_pos": 0}},
+		{"name": "underflow_byte", "program": "-.", "max_steps": 2, "input_bytes": [], "expected": {"status": "halted", "steps": 2, "ip": 2, "pointer": 0, "tape": [255], "output_bytes": [255], "input_pos": 0}},
+		{"name": "overflow_byte", "program": "-+.", "max_steps": 3, "input_bytes": [], "expected": {"status": "halted", "steps": 3, "ip": 3, "pointer": 0, "tape": [0], "output_bytes": [0], "input_pos": 0}},
+		{"name": "tape_allocation_preserved", "program": ">+<", "max_steps": 3, "input_bytes": [], "expected": {"status": "halted", "steps": 3, "ip": 3, "pointer": 0, "tape": [0, 1], "output_bytes": [], "input_pos": 0}},
+		{"name": "nested_skip", "program": "[[]]+", "max_steps": 2, "input_bytes": [], "expected": {"status": "halted", "steps": 2, "ip": 5, "pointer": 0, "tape": [1], "output_bytes": [], "input_pos": 0}},
+		{"name": "transfer_loop", "program": "++[>+<-]", "max_steps": 13, "input_bytes": [], "expected": {"status": "halted", "steps": 13, "ip": 8, "pointer": 0, "tape": [0, 2], "output_bytes": [], "input_pos": 0}},
+		{"name": "nested_execution", "program": "++[>++[>+<-]<-]", "max_steps": 37, "input_bytes": [], "expected": {"status": "halted", "steps": 37, "ip": 15, "pointer": 0, "tape": [0, 0, 4], "output_bytes": [], "input_pos": 0}},
+		{"name": "byte_input_and_eof", "program": ",.,.,.", "max_steps": 6, "input_bytes": [255, 65], "expected": {"status": "halted", "steps": 6, "ip": 6, "pointer": 0, "tape": [0], "output_bytes": [255, 65, 0], "input_pos": 2}},
+		{"name": "input_position_prevents_false_cycle", "program": "+[,]", "max_steps": 6, "input_bytes": [1, 0], "expected": {"status": "halted", "steps": 6, "ip": 4, "pointer": 0, "tape": [0], "output_bytes": [], "input_pos": 2}},
+		{"name": "output_producing_cycle", "program": "+[.]", "max_steps": 100, "input_bytes": [], "expected": {"status": "cycle_detected", "steps": 4, "ip": 2, "pointer": 0, "tape": [1], "output_bytes": [1], "input_pos": 0, "cycle_start": 2, "cycle_period": 2}},
+		{"name": "cycle_at_cutoff_is_unresolved", "program": "+[]", "max_steps": 3, "input_bytes": [], "expected": {"status": "step_limit", "steps": 3, "ip": 2, "pointer": 0, "tape": [1], "output_bytes": [], "input_pos": 0}},
+		{"name": "cycle_after_cutoff_extension", "program": "+[]", "max_steps": 4, "input_bytes": [], "expected": {"status": "cycle_detected", "steps": 3, "ip": 2, "pointer": 0, "tape": [1], "output_bytes": [], "input_pos": 0, "cycle_start": 2, "cycle_period": 1}},
+		{"name": "wrapping_increment_512", "program": "+[+]", "max_steps": 512, "input_bytes": [], "expected": {"status": "halted", "steps": 512, "ip": 4, "pointer": 0, "tape": [0], "output_bytes": [], "input_pos": 0}},
+		{"name": "wrapping_decrement_512", "program": "-[-]", "max_steps": 512, "input_bytes": [], "expected": {"status": "halted", "steps": 512, "ip": 4, "pointer": 0, "tape": [0], "output_bytes": [], "input_pos": 0}},
+		{"name": "closing_bracket_still_required", "program": "+[+]", "max_steps": 511, "input_bytes": [], "expected": {"status": "step_limit", "steps": 511, "ip": 3, "pointer": 0, "tape": [0], "output_bytes": [], "input_pos": 0}},
+		{"name": "invalid_before_execution", "program": "+[", "max_steps": 0, "input_bytes": [], "expected": {"status": "syntactically_invalid", "steps": 0, "ip": 0, "pointer": 0, "tape": [0], "output_bytes": [], "input_pos": 0}}
+	]
+}

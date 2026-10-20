@@ -1,231 +1,122 @@
-# BrainF Busy Beaver Simulator
+# Brainfuck Computational Productivity Research
 
-A research Python project that explores **all Brainfuck programs of length 4**, classifies their behavior, filters invalid programs, detects cycles, groups duplicate outcomes, and connects the results to a simple **Kolmogorov complexity** argument.
+**From Short Programs to Complex Computation: An Empirical Study of Brainfuck Program Length, Runtime, and Output Productivity**
 
-## Overview
+This project studies how short Brainfuck programs use execution time, output,
+and memory under explicitly defined semantics. It extends the original
+length-four experiment. It does not solve the classical Busy Beaver problem or
+compute exact Kolmogorov complexity.
 
-This project is a **finite Busy Beaver experiment** on Brainfuck.
+**Status:** Phase 1 is implemented and validated. Longer searches, resource
+metrics, research paper, and interactive website remain planned phases.
 
-Instead of studying all possible Turing machines, this project studies all possible **Brainfuck strings of length 4** over the 8 Brainfuck commands:
+## Run the validated baseline
 
-```text
-><+-.,[]
-```
+Requires Python 3.11 or newer. Validated locally with Python 3.13.1. No runtime
+or test dependencies need installation. Run from the repository root:
 
-Since there are 8 commands and the program length is 4, the total search space is:
-
-```text
-8^4 = 4096 programs
-```
-
-The simulator:
-
-- generates all length-4 programs
-- filters out syntactically invalid programs
-- runs valid programs with a Brainfuck interpreter
-- detects halting, cycles, and step-limit cases
-- groups programs by their final halted outcome
-- uses the results to make a simple Kolmogorov complexity observation
-
-## What this project does
-
-### 1. Generate all programs of length 4
-Every possible string of length 4 over the Brainfuck alphabet is generated.
-
-### 2. Filter invalid programs
-Programs with unmatched `[` or `]` are rejected before execution.
-
-### 3. Execute valid programs
-Valid programs are run with a simple Brainfuck interpreter.
-
-The interpreter tracks:
-
-- instruction pointer
-- data pointer
-- tape contents
-- output
-- execution steps
-
-### 4. Detect non-halting behavior
-The simulator uses **cycle detection** by storing previously seen execution states.
-
-A state includes enough information to tell whether the program has returned to the same situation again. If the same state appears again, the program is classified as cycling.
-
-### 5. Group equivalent halted outcomes
-Different programs may halt with the **same final result**.
-
-A halted outcome is encoded using:
-
-```text
-OUT=<repr(output)>|PTR=<pointer>|TAPE=<comma-separated tape>
-```
-
-This makes it possible to count:
-
-- how many halted programs are unique
-- how many are duplicates of another halted outcome
-
-### 6. Connect outcomes to Kolmogorov complexity
-For each halted outcome, we can view a shortest halting Brainfuck program as a **description** of that outcome.
-
-Because Brainfuck has 8 commands, each command can be encoded in:
-
-```text
-3 bits
-```
-
-So a halting witness program of length 4 gives an upper bound of:
-
-```text
-4 × 3 = 12 bits
-```
-
-for the description length of its outcome, up to a fixed additive constant.
-
-We also use a counting argument from the number of distinct halted outcomes to get a simple lower-bound observation.
-
-## Main results
-
-### Search space
-- Total programs: **4096**
-- Valid programs: **1514**
-- Invalid programs: **2582**
-
-### Execution classification
-- Halted programs: **1482**
-- Cycle-detected programs: **30**
-- Step-limit programs: **2**
-
-### Halted outcome analysis
-- Distinct halted outcomes: **228**
-- Duplicate halted programs: **1254**
-
-### Step behavior
-- Maximum halting steps observed: **4**
-
-## Kolmogorov complexity connection
-
-This project does **not** compute exact Kolmogorov complexity, because exact KC is uncomputable in general.
-
-What it does provide is:
-
-### Upper-bound idea
-If an outcome is produced by a halting Brainfuck program of length 4, then that outcome has a description of at most:
-
-```text
-12 bits + constant
-```
-
-because each of the 4 commands can be encoded with 3 bits.
-
-### Lower-bound idea
-Since there are **228 distinct halted outcomes**, at least some outcomes must require about:
-
-```text
-log2(228) ≈ 7 bits
-```
-
-to distinguish them by counting alone.
-
-So, in this finite experiment, we can confidently say:
-
-- some outcomes have a short description via a halting program
-- the shortest description is at most 12 bits for outcomes witnessed by length-4 programs
-- the number of distinct outcomes gives a simple counting-based lower bound of about 7 bits
-
-## Why cycle detection matters
-
-Cycle detection is important because some programs never halt.
-
-Without cycle detection, the simulator could keep running forever on looping programs.
-
-Cycle detection lets us:
-
-- recognize repeated execution states
-- stop infinite repetition safely
-- separate halting behavior from non-halting behavior
-- make the search over all programs practical
-
-## Project structure
-
-This project includes code for:
-
-- cleaning/filtering Brainfuck commands
-- matching brackets
-- interpreting Brainfuck programs
-- generating all length-4 programs
-- classifying execution behavior
-- grouping equivalent halted outcomes
-- summarizing the final statistics
-
-## Core functions
-
-Core logic includes functions such as:
-
-- `clean_program(program)`
-- `build_bracket_map(program)`
-- `run_brainfuck(...)`
-
-and a simulation script that generates and analyzes all length-4 programs.
-
-## How to run
-
-Run the main simulation script:
-
-```bash
+```powershell
 python generate.py
+python generate.py --max-steps 512
+python generate.py --max-steps 512 --json
+python -B -m unittest discover -s tests -v
 ```
 
-This prints summary statistics such as:
+The default command preserves the historical **100-step** experiment. The JSON
+option prints a structured summary with version, semantics, configuration,
+classification counts, and witnesses; it is not a full per-program dataset.
 
-- total programs
-- valid and invalid counts
-- halted / cycle / step-limit counts
-- number of distinct halted outcomes
-- duplicate outcomes
+Trace a program through the same interpreter:
 
-## What this project is useful for
+```powershell
+python generate.py --trace '>>>+'
+python generate.py --trace ',.,.' --input-hex ff41
+python generate.py --trace '+[+]' --max-steps 512
+```
 
-This project is useful as a small computational experiment in:
+Tracing is opt-in; imports no longer execute experiments or print traces.
+`generate.run_program(program, max_steps)` retains the original five-item tuple
+for valid command-only programs. New code uses the package's structured result.
 
-- computability
-- small-program behavior
-- halting vs looping classification
-- state-based cycle detection
-- finite approximations to Busy Beaver–style questions
-- simple Kolmogorov complexity reasoning
+## Verified length-four results
 
-## Limitations
+All 4096 strings over `><+-.,[]` are considered. Exactly 1514 are syntactically
+valid and 2582 are invalid.
 
-This is a **finite experimental study**, not a full Busy Beaver solution.
+| Measurement | Historical 100-step limit | Extended 512-step limit |
+| --- | ---: | ---: |
+| Proven halted | 1482 | 1484 |
+| Proven nonterminating by repeated state | 30 | 30 |
+| Unresolved after step limit | 2 | 0 |
+| Distinct halted outcomes | 228 | 228 |
+| Duplicate halted programs | 1254 | 1256 |
+| Maximum observed halting steps | 4 | 512 |
 
-In particular:
+The two previously unresolved programs, `+[+]` and `-[-]`, each halt after
+**512 executed instructions** with no output and a zero cell. Each performs
+255 arithmetic loop iterations: `1 + 1 + 255 * 2 = 512`. A cutoff of 511 still
+leaves the closing bracket unexecuted. Both outcomes were already represented,
+so resolving these programs adds no distinct outcome.
 
-- it only studies Brainfuck programs of length 4
-- exact Kolmogorov complexity is not computed
-- step-limit cases are only bounded experimentally
-- results depend on the chosen execution model and outcome encoding
+The 100-step results remain valid historical observations. Complete
+classification at length four supports a finite-model maximum of 512,
+conditional on the implementation and enumeration being correct. This is not
+an exact classical Busy Beaver value, a general halting algorithm, or a result
+about other semantics or lengths.
 
-## Future improvements
+## Execution model
 
-Possible next steps:
+`legacy-u8-right-v1` uses 8-bit wrapping cells, a right-growing zero-initialized
+tape, a clamped left boundary, byte I/O, and EOF writing zero. Primary baseline
+input is empty. Every executed command costs one step. A nonzero `]` continues
+after its matching `[`, so the opening bracket is not re-executed on each
+iteration. Research source must contain only commands and valid brackets.
 
-- test longer program lengths
-- compare behavior across different lengths
-- record full execution traces automatically
-- visualize outcome families
-- study shortest witnesses for each halted outcome
-- tighten finite upper/lower bound arguments
+A halted outcome consists of output bytes, final pointer, and the entire
+allocated tape, including trailing zeros. Output is separate from memory.
+A repeated control state proves nontermination; reaching a step limit does not.
 
-## Summary
+See [the full semantics](docs/SEMANTICS.md) for ordering at cutoffs, the cycle
+argument, input handling, and outcome equivalence.
 
-This project built a complete simulator for all Brainfuck strings of length 4, filtered invalid programs, detected cycles, classified execution behavior, grouped duplicate halted outcomes, and connected the resulting finite outcome set to a simple Kolmogorov complexity argument.
+## Architecture
 
-Final headline numbers:
+| File or directory | Responsibility |
+| --- | --- |
+| `generate.py` | Checkout-friendly CLI and legacy tuple adapter; no import-time experiment. |
+| `src/brainfuck_research/syntax.py` | Strict source validation and bracket maps. |
+| `src/brainfuck_research/interpreter.py` | Execution, cycle evidence, and shared trace logic. |
+| `src/brainfuck_research/models.py` | Immutable states, results, and trace events. |
+| `src/brainfuck_research/enumeration.py` | Length-four candidate enumeration. |
+| `src/brainfuck_research/analysis.py` | Outcome groups and descriptive statistics. |
+| `src/brainfuck_research/config.py` | Validated baseline step budget. |
+| `src/brainfuck_research/experiments.py` | Baseline orchestration. |
+| `src/brainfuck_research/export.py` | JSON-safe records and summaries. |
+| `src/brainfuck_research/cli.py` | Command-line options and presentation. |
+| `tests/` | Semantic, differential, analysis, and CLI tests. |
+| `tests/fixtures/semantics.json` | Hand-derived cases for future Python/JavaScript parity. |
+| `data/historical/` | Original code/README and independently reproduced baseline hashes. |
+| `scripts/capture_legacy_baseline.py` | Baseline reproduction using only archived code. |
 
-- **4096** total programs
-- **1514** valid programs
-- **1482** halted
-- **30** cycle-detected
-- **2** step-limit
-- **228** distinct halted outcomes
+## Scientific interpretation
+
+A halting program provides a description of its outcome under a specified
+interpreter and encoding; it does not establish that the description is
+shortest. Three bits encode each command, but universal-machine description
+bounds include decoder overhead and require plain/prefix complexity to be
+distinguished. Conditional outcome frequency is empirical surprisal, not exact
+Kolmogorov complexity. No novelty or compression advantage is claimed.
+
+Read [the audit and correction report](docs/AUDIT.md),
+[reproduction instructions](docs/REPRODUCIBILITY.md), and
+[the approved five-phase plan](docs/PLAN.md).
+
+## Current limits and next phase
+
+Phase 1 validates length four only. It enforces an instruction budget but has
+no separate memory, output, or wall-clock limits. Exact cycle detection retains
+tape snapshots, so unrestricted larger runs are inappropriate. Phase 2 will add
+configurable enumeration, productivity metrics, resource controls, and measured
+cost estimates before extending experiments. Phase 2 requires approval.
+
+There is no website deployment or live URL yet.
