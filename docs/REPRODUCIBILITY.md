@@ -1,5 +1,8 @@
 # Reproducing Phase 1
 
+This guide preserves Phase 1 reproduction. For the completed Phase 2 runner,
+limits, streaming exports, and benchmarks, see [EXPERIMENTS.md](EXPERIMENTS.md).
+
 ## Environment and provenance
 
 Run from the repository root with Python 3.11 or newer. The Phase 1 local

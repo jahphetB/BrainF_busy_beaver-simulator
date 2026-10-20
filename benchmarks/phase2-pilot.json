@@ -1,0 +1,513 @@
+{
+	"schema_version": 1,
+	"purpose": "Phase 2 engineering benchmark and feasibility pilot, not Phase 3 research dataset",
+	"generated_at_utc": "2026-10-20T00:16:02.751920+00:00",
+	"environment": {
+		"python": "3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)]",
+		"platform": "Windows-11-10.0.26200-SP0",
+		"machine": "AMD64",
+		"processor_reported_by_os": "Intel64 Family 6 Model 126 Stepping 5, GenuineIntel"
+	},
+	"engine_version": "0.2.0",
+	"semantics_id": "legacy-u8-right-v1",
+	"git_head_at_run": "6cce7a3b795d87b87676e9bbb7d39f91075c2941",
+	"working_tree_dirty_at_run": true,
+	"source_sha256": "82ae6a808530aee803d065547f0eecf0a95c7d278da12f789fa1924f22a1827c",
+	"settings": {
+		"seed": 20261019,
+		"sample_count_cap": 2048,
+		"repeats": 3,
+		"max_steps": 512,
+		"limits": {
+			"max_tape_cells": 4096,
+			"max_output_bytes": 65536,
+			"max_seen_states": 10000,
+			"max_state_bytes": 4194304,
+			"max_seconds": null
+		},
+		"pilot_program_seconds": 1,
+		"pilot_repetition_seconds": 30
+	},
+	"legacy_comparison": {
+		"length": 4,
+		"valid_programs": 1514,
+		"legacy": {
+			"seconds": [
+				0.05574279999564169,
+				0.05395309999585152,
+				0.0748260999971535
+			],
+			"median_seconds": 0.05574279999564169
+		},
+		"current_bounded_core": {
+			"seconds": [
+				0.01701609999872744,
+				0.014562399999704212,
+				0.01434270000027027
+			],
+			"median_seconds": 0.014562399999704212
+		},
+		"median_speed_ratio_legacy_over_current": 3.827858045155601
+	},
+	"pilots": [
+		{
+			"length": 1,
+			"candidate_count": 8,
+			"total_candidates": 8,
+			"valid_candidates_total": 6,
+			"exhaustive": true,
+			"ranks_sha256": "29101ebf1ead685029508789eee51c4d4fff65524064d8e32a48efded7036982",
+			"seconds": [
+				0.00023220000002766028,
+				0.00010940000356640667,
+				0.0001405000002705492
+			],
+			"median_seconds": 0.0001405000002705492,
+			"linear_full_search_seconds": 0.0001405000002705492,
+			"linear_full_search_seconds_from_fastest_repeat": 0.00010940000356640667,
+			"linear_full_search_seconds_from_slowest_repeat": 0.00023220000002766028,
+			"summary_for_sample_only": {
+				"counts": {
+					"halted": 6,
+					"cycle_detected": 0,
+					"step_limit": 0,
+					"syntactically_invalid": 2,
+					"resource_limit": 0
+				},
+				"metrics": {
+					"T": 1,
+					"O": 1,
+					"M": 2,
+					"D": 5,
+					"U": 0
+				},
+				"records": {
+					"T": {
+						"value": 1,
+						"program": ">",
+						"ties": 6
+					},
+					"O": {
+						"value": 1,
+						"program": ".",
+						"ties": 1
+					},
+					"M": {
+						"value": 2,
+						"program": ">",
+						"ties": 1
+					}
+				},
+				"maximum_steps_per_command": 1.0,
+				"maximum_output_bytes_per_command": 1.0,
+				"duplicate_halted_programs": 1,
+				"executed_steps_all_programs": 6,
+				"resource_reasons": {},
+				"retained_outcomes": 5,
+				"retained_outcome_bytes": 7,
+				"unretained_final_distinct_outcome": false,
+				"peak_seen_states_per_program": 0,
+				"peak_state_bytes_per_program": 0
+			}
+		},
+		{
+			"length": 2,
+			"candidate_count": 64,
+			"total_candidates": 64,
+			"valid_candidates_total": 37,
+			"exhaustive": true,
+			"ranks_sha256": "a49d88051b2d2e5d1255d4f806a7569cda9b33a650a908566197031349ad8db4",
+			"seconds": [
+				0.0009208999981638044,
+				0.0009329999957117252,
+				0.0009518000006210059
+			],
+			"median_seconds": 0.0009329999957117252,
+			"linear_full_search_seconds": 0.0009329999957117252,
+			"linear_full_search_seconds_from_fastest_repeat": 0.0009208999981638044,
+			"linear_full_search_seconds_from_slowest_repeat": 0.0009518000006210059,
+			"summary_for_sample_only": {
+				"counts": {
+					"halted": 37,
+					"cycle_detected": 0,
+					"step_limit": 0,
+					"syntactically_invalid": 27,
+					"resource_limit": 0
+				},
+				"metrics": {
+					"T": 2,
+					"O": 2,
+					"M": 3,
+					"D": 19,
+					"U": 0
+				},
+				"records": {
+					"T": {
+						"value": 2,
+						"program": ">>",
+						"ties": 36
+					},
+					"O": {
+						"value": 2,
+						"program": "..",
+						"ties": 1
+					},
+					"M": {
+						"value": 3,
+						"program": ">>",
+						"ties": 1
+					}
+				},
+				"maximum_steps_per_command": 1.0,
+				"maximum_output_bytes_per_command": 1.0,
+				"duplicate_halted_programs": 18,
+				"executed_steps_all_programs": 73,
+				"resource_reasons": {},
+				"retained_outcomes": 19,
+				"retained_outcome_bytes": 36,
+				"unretained_final_distinct_outcome": false,
+				"peak_seen_states_per_program": 1,
+				"peak_state_bytes_per_program": 1
+			}
+		},
+		{
+			"length": 3,
+			"candidate_count": 512,
+			"total_candidates": 512,
+			"valid_candidates_total": 234,
+			"exhaustive": true,
+			"ranks_sha256": "61f3f6fd3aa109e05aa31cc4d74f333d17c8f73ced22284db2209e96a39884af",
+			"seconds": [
+				0.006720199999108445,
+				0.006933800003025681,
+				0.0175191000016639
+			],
+			"median_seconds": 0.006933800003025681,
+			"linear_full_search_seconds": 0.006933800003025681,
+			"linear_full_search_seconds_from_fastest_repeat": 0.006720199999108445,
+			"linear_full_search_seconds_from_slowest_repeat": 0.0175191000016639,
+			"summary_for_sample_only": {
+				"counts": {
+					"halted": 232,
+					"cycle_detected": 2,
+					"step_limit": 0,
+					"syntactically_invalid": 278,
+					"resource_limit": 0
+				},
+				"metrics": {
+					"T": 3,
+					"O": 3,
+					"M": 4,
+					"D": 67,
+					"U": 0
+				},
+				"records": {
+					"T": {
+						"value": 3,
+						"program": ">>>",
+						"ties": 216
+					},
+					"O": {
+						"value": 3,
+						"program": "...",
+						"ties": 1
+					},
+					"M": {
+						"value": 4,
+						"program": ">>>",
+						"ties": 1
+					}
+				},
+				"maximum_steps_per_command": 1.0,
+				"maximum_output_bytes_per_command": 1.0,
+				"duplicate_halted_programs": 165,
+				"executed_steps_all_programs": 680,
+				"resource_reasons": {},
+				"retained_outcomes": 67,
+				"retained_outcome_bytes": 160,
+				"unretained_final_distinct_outcome": false,
+				"peak_seen_states_per_program": 3,
+				"peak_state_bytes_per_program": 3
+			}
+		},
+		{
+			"length": 4,
+			"candidate_count": 2048,
+			"total_candidates": 4096,
+			"valid_candidates_total": 1514,
+			"exhaustive": false,
+			"ranks_sha256": "72129ebe5e84f08abc561e80e1a1e4036e22d2d7e4a82808620e7b18ec1f99c3",
+			"seconds": [
+				0.07038780000584666,
+				0.04118659999949159,
+				0.06712269999843556
+			],
+			"median_seconds": 0.06712269999843556,
+			"linear_full_search_seconds": 0.13424539999687113,
+			"linear_full_search_seconds_from_fastest_repeat": 0.08237319999898318,
+			"linear_full_search_seconds_from_slowest_repeat": 0.1407756000116933,
+			"summary_for_sample_only": {
+				"counts": {
+					"halted": 729,
+					"cycle_detected": 15,
+					"step_limit": 0,
+					"syntactically_invalid": 1304,
+					"resource_limit": 0
+				},
+				"metrics": {
+					"T": 512,
+					"O": 3,
+					"M": 4,
+					"D": 151,
+					"U": 0
+				},
+				"records": {
+					"T": {
+						"value": 512,
+						"program": "+[+]",
+						"ties": 2
+					},
+					"O": {
+						"value": 3,
+						"program": "-...",
+						"ties": 11
+					},
+					"M": {
+						"value": 4,
+						"program": ">>+>",
+						"ties": 5
+					}
+				},
+				"maximum_steps_per_command": 128.0,
+				"maximum_output_bytes_per_command": 0.75,
+				"duplicate_halted_programs": 578,
+				"executed_steps_all_programs": 3820,
+				"resource_reasons": {},
+				"retained_outcomes": 151,
+				"retained_outcome_bytes": 426,
+				"unretained_final_distinct_outcome": false,
+				"peak_seen_states_per_program": 512,
+				"peak_state_bytes_per_program": 512
+			}
+		},
+		{
+			"length": 5,
+			"candidate_count": 2048,
+			"total_candidates": 32768,
+			"valid_candidates_total": 9996,
+			"exhaustive": false,
+			"ranks_sha256": "8c393e88f46ffa2f14cc51fd8bfa25cf413c8cb7e1ca20d1f7525c726e4f3dd1",
+			"seconds": [
+				0.027223799996136222,
+				0.02611120000074152,
+				0.02609120000124676
+			],
+			"median_seconds": 0.02611120000074152,
+			"linear_full_search_seconds": 0.4177792000118643,
+			"linear_full_search_seconds_from_fastest_repeat": 0.4174592000199482,
+			"linear_full_search_seconds_from_slowest_repeat": 0.43558079993817955,
+			"summary_for_sample_only": {
+				"counts": {
+					"halted": 589,
+					"cycle_detected": 18,
+					"step_limit": 1,
+					"syntactically_invalid": 1440,
+					"resource_limit": 0
+				},
+				"metrics": {
+					"T": 5,
+					"O": 4,
+					"M": 4,
+					"D": 181,
+					"U": 1
+				},
+				"records": {
+					"T": {
+						"value": 5,
+						"program": ">>>++",
+						"ties": 480
+					},
+					"O": {
+						"value": 4,
+						"program": ".+...",
+						"ties": 3
+					},
+					"M": {
+						"value": 4,
+						"program": ">>>++",
+						"ties": 9
+					}
+				},
+				"maximum_steps_per_command": 1.0,
+				"maximum_output_bytes_per_command": 0.8,
+				"duplicate_halted_programs": 408,
+				"executed_steps_all_programs": 3302,
+				"resource_reasons": {},
+				"retained_outcomes": 181,
+				"retained_outcome_bytes": 560,
+				"unretained_final_distinct_outcome": false,
+				"peak_seen_states_per_program": 512,
+				"peak_state_bytes_per_program": 43947
+			}
+		},
+		{
+			"length": 6,
+			"candidate_count": 2048,
+			"total_candidates": 262144,
+			"valid_candidates_total": 67181,
+			"exhaustive": false,
+			"ranks_sha256": "79cd31333b0ba2eeb4035ab5cf3326a1945d8b5768cf4034c9154f8c8cc61021",
+			"seconds": [
+				0.026473099998838734,
+				0.026208399998722598,
+				0.025840600006631576
+			],
+			"median_seconds": 0.026208399998722598,
+			"linear_full_search_seconds": 3.3546751998364925,
+			"linear_full_search_seconds_from_fastest_repeat": 3.3075968008488417,
+			"linear_full_search_seconds_from_slowest_repeat": 3.388556799851358,
+			"summary_for_sample_only": {
+				"counts": {
+					"halted": 467,
+					"cycle_detected": 30,
+					"step_limit": 2,
+					"syntactically_invalid": 1549,
+					"resource_limit": 0
+				},
+				"metrics": {
+					"T": 6,
+					"O": 4,
+					"M": 5,
+					"D": 182,
+					"U": 2
+				},
+				"records": {
+					"T": {
+						"value": 6,
+						"program": ">>>>..",
+						"ties": 342
+					},
+					"O": {
+						"value": 4,
+						"program": "..<..,",
+						"ties": 1
+					},
+					"M": {
+						"value": 5,
+						"program": ">>>>..",
+						"ties": 1
+					}
+				},
+				"maximum_steps_per_command": 1.0,
+				"maximum_output_bytes_per_command": 0.6666666666666666,
+				"duplicate_halted_programs": 285,
+				"executed_steps_all_programs": 3651,
+				"resource_reasons": {},
+				"retained_outcomes": 182,
+				"retained_outcome_bytes": 584,
+				"unretained_final_distinct_outcome": false,
+				"peak_seen_states_per_program": 512,
+				"peak_state_bytes_per_program": 512
+			}
+		},
+		{
+			"length": 7,
+			"candidate_count": 2048,
+			"total_candidates": 2097152,
+			"valid_candidates_total": 458562,
+			"exhaustive": false,
+			"ranks_sha256": "f09ca02e63568ca14af7867f562aa6dd94fe6ebe47783fd6f2e9a566d02f2d37",
+			"seconds": [
+				0.025446800005738623,
+				0.04672230000142008,
+				0.04242620000150055
+			],
+			"median_seconds": 0.04242620000150055,
+			"linear_full_search_seconds": 43.44442880153656,
+			"linear_full_search_seconds_from_fastest_repeat": 26.05752320587635,
+			"linear_full_search_seconds_from_slowest_repeat": 47.84363520145416,
+			"summary_for_sample_only": {
+				"counts": {
+					"halted": 443,
+					"cycle_detected": 25,
+					"step_limit": 1,
+					"syntactically_invalid": 1579,
+					"resource_limit": 0
+				},
+				"metrics": {
+					"T": 7,
+					"O": 4,
+					"M": 6,
+					"D": 212,
+					"U": 1
+				},
+				"records": {
+					"T": {
+						"value": 7,
+						"program": ">>><,<-",
+						"ties": 297
+					},
+					"O": {
+						"value": 4,
+						"program": ".-+.<..",
+						"ties": 4
+					},
+					"M": {
+						"value": 6,
+						"program": ">+>>>>-",
+						"ties": 1
+					}
+				},
+				"maximum_steps_per_command": 1.0,
+				"maximum_output_bytes_per_command": 0.5714285714285714,
+				"duplicate_halted_programs": 231,
+				"executed_steps_all_programs": 3324,
+				"resource_reasons": {},
+				"retained_outcomes": 212,
+				"retained_outcome_bytes": 760,
+				"unretained_final_distinct_outcome": false,
+				"peak_seen_states_per_program": 512,
+				"peak_state_bytes_per_program": 1022
+			}
+		}
+	],
+	"streaming_length_four": {
+		"config": {
+			"lengths": [
+				4
+			],
+			"max_steps": 512,
+			"max_programs_per_length": 10000,
+			"max_seconds": 30.0,
+			"max_distinct_outcomes": 100000,
+			"max_outcome_bytes": 16777216,
+			"limits": {
+				"max_tape_cells": 4096,
+				"max_output_bytes": 65536,
+				"max_seen_states": 100000,
+				"max_state_bytes": 16777216,
+				"max_seconds": null
+			}
+		},
+		"timing": {
+			"seconds": [
+				0.06206139999994775,
+				0.05599459999939427,
+				0.05197999999654712
+			],
+			"median_seconds": 0.05599459999939427
+		}
+	},
+	"memory": {
+		"method": "Separate tracemalloc runs; peak traced Python allocations, not process RSS",
+		"materialized_baseline_peak_bytes": 1528448,
+		"streaming_peak_bytes": 67855
+	},
+	"limitations": [
+		"Fixed-seed samples can miss rare long-running or high-output programs; projections are not guaranteed runtimes or confidence intervals.",
+		"Projected times apply only to the 512-step budget and configured resource limits; longer budgets require new pilots.",
+		"Pilot timings include execution, time-limit configuration, and summary aggregation, but exclude sample construction and file export.",
+		"Record maxima and D for incomplete pilots describe only the sample, not the full length-n search space.",
+		"Timing varies with host load; working-tree fingerprint identifies the benchmark source even before its commit."
+	]
+}

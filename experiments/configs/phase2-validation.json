@@ -1,0 +1,15 @@
+{
+	"lengths": [1, 2, 3, 4],
+	"max_steps": 512,
+	"max_programs_per_length": 10000,
+	"max_seconds": 30,
+	"max_distinct_outcomes": 100000,
+	"max_outcome_bytes": 16777216,
+	"limits": {
+		"max_tape_cells": 4096,
+		"max_output_bytes": 65536,
+		"max_seen_states": 100000,
+		"max_state_bytes": 16777216,
+		"max_seconds": null
+	}
+}

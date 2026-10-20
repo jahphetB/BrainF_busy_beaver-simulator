@@ -1,6 +1,7 @@
 """Baseline enumeration, preserving the original alphabet order."""
 
 from itertools import product
+from math import comb
 
 from .syntax import COMMANDS
 from .config import validate_integer
@@ -27,3 +28,9 @@ def program_at_index(length: int, index: int) -> str:
 		index, remainder = divmod(index, 8)
 		characters[position] = COMMANDS[remainder]
 	return "".join(characters)
+
+
+def valid_program_count(length: int) -> int:
+	"""Choose bracket positions, a balanced Catalan word, and six other commands."""
+	validate_integer("length", length, 1, 7)
+	return sum(comb(length, 2 * pairs) * (comb(2 * pairs, pairs) // (pairs + 1)) * 6 ** (length - 2 * pairs) for pairs in range(length // 2 + 1))

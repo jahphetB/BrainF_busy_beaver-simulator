@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import sys
 
 from .config import BaselineConfig
 from .experiments import run_baseline
@@ -17,6 +18,10 @@ def print_trace_step(event: TraceStep) -> None:
 
 
 def main(argv=None) -> int:
+	argv = list(sys.argv[1:] if argv is None else argv)
+	if argv and argv[0] == "experiment":
+		from .experiment_cli import main as experiment_main
+		return experiment_main(argv[1:])
 	parser = argparse.ArgumentParser(description="Validated Brainfuck length-four research baseline")
 	parser.add_argument("--max-steps", type=int, default=100)
 	parser.add_argument("--json", action="store_true", help="Print a machine-readable baseline summary")

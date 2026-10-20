@@ -4,10 +4,11 @@ from unittest.mock import patch
 
 from tests import ROOT
 from brainfuck_research.config import ExecutionLimits, ExperimentConfig
-from brainfuck_research.enumeration import enumerate_programs, program_at_index
+from brainfuck_research.enumeration import enumerate_programs, program_at_index, valid_program_count
 from brainfuck_research.export import result_record
 from brainfuck_research.interpreter import run_program
 from brainfuck_research.models import Status
+from brainfuck_research.syntax import valid_brackets
 
 
 class ResourceTests(unittest.TestCase):
@@ -82,6 +83,21 @@ class ResourceTests(unittest.TestCase):
 
 
 class EnumerationConfigTests(unittest.TestCase):
+	def test_combinatorial_counts_match_enumeration_and_independent_prefix_dp(self):
+		for length in range(1, 8):
+			counts = {0: 1}
+			for _ in range(length):
+				following = {}
+				for depth, count in counts.items():
+					following[depth] = following.get(depth, 0) + 6 * count
+					following[depth + 1] = following.get(depth + 1, 0) + count
+					if depth:
+						following[depth - 1] = following.get(depth - 1, 0) + count
+				counts = following
+			self.assertEqual(valid_program_count(length), counts[0])
+			if length <= 4:
+				self.assertEqual(valid_program_count(length), sum(valid_brackets(p) for p in enumerate_programs(length)))
+
 	def test_small_searches_have_exact_unique_coverage_and_rank_order(self):
 		for length in range(1, 5):
 			programs = list(enumerate_programs(length))

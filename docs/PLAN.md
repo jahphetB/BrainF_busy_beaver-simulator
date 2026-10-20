@@ -4,6 +4,9 @@ Each phase has three task groups and requires approval before the next phase.
 Make at least two focused commits per phase and push completed work. Use tabs
 for new code, keep research and presentation separate, and report real checks.
 
+Phases 1 and 2 are implemented and verified. Phase 3 awaits approval. Completion
+records: [Phase 1](PHASE_1.md), [Phase 2](PHASE_2.md).
+
 | Phase | Task groups | Completion evidence |
 | --- | --- | --- |
 | 1: Audit and validation | Preserve baseline/semantics; modular Python refactor; regression and differential tests. | Original and extended length-four results reproduced, all valid final states compared, semantics and corrections documented. |

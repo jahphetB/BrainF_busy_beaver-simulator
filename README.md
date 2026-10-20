@@ -7,8 +7,9 @@ and memory under explicitly defined semantics. It extends the original
 length-four experiment. It does not solve the classical Busy Beaver problem or
 compute exact Kolmogorov complexity.
 
-**Status:** Phase 1 is implemented and validated. Longer searches, resource
-metrics, research paper, and interactive website remain planned phases.
+**Status:** Phases 1 and 2 are implemented and validated. The engine supports
+bounded streaming experiments for lengths 1-7. Publication datasets, expanded
+experiments, the research paper, and the interactive website remain later phases.
 
 ## Run the validated baseline
 
@@ -87,12 +88,15 @@ argument, input handling, and outcome equivalence.
 | `src/brainfuck_research/syntax.py` | Strict source validation and bracket maps. |
 | `src/brainfuck_research/interpreter.py` | Execution, cycle evidence, and shared trace logic. |
 | `src/brainfuck_research/models.py` | Immutable states, results, and trace events. |
-| `src/brainfuck_research/enumeration.py` | Length-four candidate enumeration. |
+| `src/brainfuck_research/enumeration.py` | Lazy length 1-7 enumeration, direct ranks, and exact syntax counts. |
 | `src/brainfuck_research/analysis.py` | Outcome groups and descriptive statistics. |
-| `src/brainfuck_research/config.py` | Validated baseline step budget. |
-| `src/brainfuck_research/experiments.py` | Baseline orchestration. |
+| `src/brainfuck_research/config.py` | Validated execution and experiment budgets. |
+| `src/brainfuck_research/experiments.py` | Baseline and streaming searches, coverage, and cost preview. |
 | `src/brainfuck_research/export.py` | JSON-safe records and summaries. |
 | `src/brainfuck_research/cli.py` | Command-line options and presentation. |
+| `src/brainfuck_research/experiment_cli.py` | Bounded experiment configuration and JSONL export. |
+| `experiments/configs/` | Reproducible experiment settings. |
+| `benchmarks/` | Measured performance, engineering validation, and feasibility pilots. |
 | `tests/` | Semantic, differential, analysis, and CLI tests. |
 | `tests/fixtures/semantics.json` | Hand-derived cases for future Python/JavaScript parity. |
 | `data/historical/` | Original code/README and independently reproduced baseline hashes. |
@@ -111,12 +115,38 @@ Read [the audit and correction report](docs/AUDIT.md),
 [reproduction instructions](docs/REPRODUCIBILITY.md), and
 [the approved five-phase plan](docs/PLAN.md).
 
+## Bounded experiments and performance
+
+```powershell
+python generate.py experiment --config experiments/configs/phase2-validation.json
+python generate.py experiment --lengths 5 6 7 --exhaustive --estimate
+python generate.py experiment --lengths 5 --max-programs 1000 --max-seconds 10
+```
+
+The first command validates lengths 1-4. The second estimates candidate and
+instruction ceilings **without executing programs**. The third evaluates a
+bounded alphabet-order prefix, not an unbiased sample. Defaults limit candidates,
+wall time, tape, output, state history, and retained outcomes. Use `--report` and
+`--records` with new filenames to save JSON summaries and streamed JSONL records.
+
+Summaries report maximum halted runtime T, output O, visited cells M, distinct
+halted outcomes D, and evaluated unresolved programs U. Unexamined candidates
+are counted separately. Incomplete coverage or unresolved programs produces
+observed lower bounds. Resource limits are not nontermination proofs.
+
+See [the experiment guide](docs/EXPERIMENTS.md) for metric definitions, budgets,
+configuration, and export commands. **61 tests pass**, including the historical
+baseline comparisons. [Measured benchmarks](benchmarks/README.md) show a 3.83x
+core timing ratio versus the archived original on the tested length-four workload;
+streaming also substantially reduces traced Python allocation peaks.
+
 ## Current limits and next phase
 
-Phase 1 validates length four only. It enforces an instruction budget but has
-no separate memory, output, or wall-clock limits. Exact cycle detection retains
-tape snapshots, so unrestricted larger runs are inappropriate. Phase 2 will add
-configurable enumeration, productivity metrics, resource controls, and measured
-cost estimates before extending experiments. Phase 2 requires approval.
+Exhaustive searches through length four are validated. Lengths 5-7 have only
+bounded benchmark samples so far. Time limits are cooperative, and state/outcome
+byte budgets measure retained payloads rather than total process memory. Pilot
+runtime projections can miss rare expensive programs and do not extrapolate to
+larger step limits. [Phase 3](docs/PHASE_2.md) requires approval before expanding
+the research experiments and publishing versioned datasets.
 
 There is no website deployment or live URL yet.
