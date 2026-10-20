@@ -41,8 +41,13 @@ empty input; accepting supplied bytes is a tested API extension.
 1. Validate source before execution; invalid source is `syntactically_invalid`.
 2. If the instruction pointer has left the program, classify `halted`.
 3. If the executed instruction count equals the budget, classify `step_limit`.
-4. Otherwise check for an exactly repeated execution state; classify
-   `cycle_detected` if one is found, or execute the next instruction.
+4. If an enabled wall-clock deadline has expired, classify `resource_limit`.
+5. Otherwise check for an exactly repeated execution state; classify
+   `cycle_detected` if one is found.
+6. Before executing an instruction or retaining its control state, check tape,
+   output, state-count, and state-payload limits, in that order. If the next
+   operation would exceed a budget, classify `resource_limit` without executing
+   it. Otherwise retain the state when necessary and execute the instruction.
 
 This preserves historical cutoff precedence: halting on the last permitted
 step is recognized; a repeated state first reached at the cutoff is unresolved
@@ -50,8 +55,17 @@ until the budget permits checking it. No cycle check itself consumes a step.
 
 The classifications mean proven halted, proven nonterminating by a repeated
 state, unresolved after the step limit, and syntactically invalid, respectively.
-Other resource limits and `resource_limit` classification belong to Phase 2;
-Phase 1 does not pretend to enforce memory or wall-clock budgets.
+`resource_limit` means stopped for another resource limit and remains unresolved.
+The result's `resource_reason` distinguishes `wall_time`, `tape_cells`,
+`output_bytes`, `seen_states`, and `state_bytes`. Reaching a budget exactly is
+allowed: stopping occurs only when a further operation needs unavailable capacity.
+Wall-clock limits are cooperative checks between instructions, not hard real-time
+or operating-system memory enforcement. They can vary with machine load.
+
+The legacy API defaults to no additional resource limits; its finite instruction
+budget still applies. The Phase 2 experiment runner always supplies explicit
+resource limits. These controls stop observations without changing the underlying
+instruction semantics, so the semantics identifier remains unchanged.
 
 ## Repeated-state argument
 
@@ -62,6 +76,11 @@ therefore repeats future control behavior indefinitely. Output is append-only
 and never read by the program, so it is deliberately absent from the key.
 An output-producing loop can be proven nonterminating even as its output grows.
 Recorded cycle start and period count executed instructions.
+
+For bracket-free programs, the instruction pointer strictly increases, so cycle
+history is unnecessary and is not stored. Programs containing brackets still
+use exactly the historical state key and detection convention. The tape uses
+byte storage; final snapshots retain the same cell values and allocated length.
 
 Exact tuple equality, not equality of a digest alone, establishes repetition.
 Allocations and trailing zero cells remain in the state. This is conservative:
@@ -76,6 +95,23 @@ and complete allocated tape are equal. Runtime and consumed-input count are
 not part of this historical outcome key. Trailing zeros are retained: visiting
 an extra cell can create a different outcome even after returning to zero.
 No output-only or trimmed-tape equivalence is silently substituted.
+
+## Phase 2 measurement definitions
+
+Each valid execution reports executed steps, actual output-byte count, cells
+visited, and final nonzero cells. Because this tape grows contiguously from
+position zero and never shrinks, the number of distinct cells visited equals
+its allocated length. The starting cell counts as visited. Final nonzero cells
+is not peak nonzero cells. The final tape and output bytes remain available in
+the result. Steps per command and output bytes per command divide by source
+command length; the empty program has undefined ratios, exported as null.
+Invalid source has no execution metrics. Partial executions expose metrics for
+their observed prefix, but do not contribute to halted productivity records.
+
+`seen_states` counts stored control states. `state_bytes` counts only the sum
+of their tape-byte payloads. It excludes dictionary, tuple, pointer, and Python
+object overhead; it must not be described as total process memory. State count
+also has a separate cap to bound the number of metadata objects.
 
 ## Independent 512-step check
 

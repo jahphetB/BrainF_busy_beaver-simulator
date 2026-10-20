@@ -26,6 +26,10 @@ def result_record(result: ExecutionResult) -> dict:
 		"cycle_start": result.cycle_start,
 		"cycle_period": result.cycle_period,
 		"error": result.error,
+		"resource_reason": result.resource_reason,
+		"seen_states": result.seen_states,
+		"state_bytes": result.state_bytes,
+		"metrics": result.metrics,
 	}
 
 
