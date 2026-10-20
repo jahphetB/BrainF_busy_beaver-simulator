@@ -1,0 +1,192 @@
+{
+	"schema_version": 2,
+	"engine_version": "0.3.0",
+	"semantics_id": "u4-right-v1",
+	"enumeration": "alphabet_order_prefix",
+	"input_bytes": [],
+	"config": {
+		"lengths": [
+			4,
+			5,
+			6
+		],
+		"cell_bits": 4,
+		"max_steps": 4096,
+		"max_programs_per_length": null,
+		"max_seconds": 60,
+		"max_distinct_outcomes": 100000,
+		"max_outcome_bytes": 16777216,
+		"limits": {
+			"max_tape_cells": 4096,
+			"max_output_bytes": 65536,
+			"max_seen_states": 100000,
+			"max_state_bytes": 16777216,
+			"max_seconds": null
+		}
+	},
+	"elapsed_seconds": 18.27094850000867,
+	"lengths": [
+		{
+			"length": 4,
+			"coverage": {
+				"total_candidates": 4096,
+				"evaluated_candidates": 4096,
+				"not_evaluated_candidates": 0,
+				"exhaustive": true,
+				"fully_resolved": true,
+				"stop_reason": "completed"
+			},
+			"bounds": "complete_finite_model_results",
+			"elapsed_seconds": 0.21660359999805223,
+			"counts": {
+				"halted": 1484,
+				"cycle_detected": 30,
+				"step_limit": 0,
+				"syntactically_invalid": 2582,
+				"resource_limit": 0
+			},
+			"metrics": {
+				"T": 32,
+				"O": 4,
+				"M": 5,
+				"D": 228,
+				"U": 0
+			},
+			"records": {
+				"T": {
+					"value": 32,
+					"program": "+[+]",
+					"ties": 2
+				},
+				"O": {
+					"value": 4,
+					"program": "....",
+					"ties": 1
+				},
+				"M": {
+					"value": 5,
+					"program": ">>>>",
+					"ties": 1
+				}
+			},
+			"maximum_steps_per_command": 8.0,
+			"maximum_output_bytes_per_command": 1.0,
+			"duplicate_halted_programs": 1256,
+			"executed_steps_all_programs": 5785,
+			"resource_reasons": {},
+			"retained_outcomes": 228,
+			"retained_outcome_bytes": 660,
+			"unretained_final_distinct_outcome": false,
+			"peak_seen_states_per_program": 32,
+			"peak_state_bytes_per_program": 32
+		},
+		{
+			"length": 5,
+			"coverage": {
+				"total_candidates": 32768,
+				"evaluated_candidates": 32768,
+				"not_evaluated_candidates": 0,
+				"exhaustive": true,
+				"fully_resolved": false,
+				"stop_reason": "completed"
+			},
+			"bounds": "observed_lower_bounds",
+			"elapsed_seconds": 1.8484274999937043,
+			"counts": {
+				"halted": 9670,
+				"cycle_detected": 322,
+				"step_limit": 4,
+				"syntactically_invalid": 22772,
+				"resource_limit": 0
+			},
+			"metrics": {
+				"T": 47,
+				"O": 15,
+				"M": 6,
+				"D": 764,
+				"U": 4
+			},
+			"records": {
+				"T": {
+					"value": 47,
+					"program": "+[<+]",
+					"ties": 8
+				},
+				"O": {
+					"value": 15,
+					"program": "+[+.]",
+					"ties": 4
+				},
+				"M": {
+					"value": 6,
+					"program": ">>>>>",
+					"ties": 1
+				}
+			},
+			"maximum_steps_per_command": 9.4,
+			"maximum_output_bytes_per_command": 3.0,
+			"duplicate_halted_programs": 8906,
+			"executed_steps_all_programs": 63522,
+			"resource_reasons": {},
+			"retained_outcomes": 764,
+			"retained_outcome_bytes": 2664,
+			"unretained_final_distinct_outcome": false,
+			"peak_seen_states_per_program": 4096,
+			"peak_state_bytes_per_program": 2798251
+		},
+		{
+			"length": 6,
+			"coverage": {
+				"total_candidates": 262144,
+				"evaluated_candidates": 262144,
+				"not_evaluated_candidates": 0,
+				"exhaustive": true,
+				"fully_resolved": false,
+				"stop_reason": "completed"
+			},
+			"bounds": "observed_lower_bounds",
+			"elapsed_seconds": 16.2057710000081,
+			"counts": {
+				"halted": 64077,
+				"cycle_detected": 3016,
+				"step_limit": 88,
+				"syntactically_invalid": 194963,
+				"resource_limit": 0
+			},
+			"metrics": {
+				"T": 66,
+				"O": 30,
+				"M": 7,
+				"D": 2536,
+				"U": 88
+			},
+			"records": {
+				"T": {
+					"value": 66,
+					"program": "+[<>+]",
+					"ties": 4
+				},
+				"O": {
+					"value": 30,
+					"program": "+[+..]",
+					"ties": 6
+				},
+				"M": {
+					"value": 7,
+					"program": ">>>>>>",
+					"ties": 1
+				}
+			},
+			"maximum_steps_per_command": 11.0,
+			"maximum_output_bytes_per_command": 5.0,
+			"duplicate_halted_programs": 61541,
+			"executed_steps_all_programs": 735805,
+			"resource_reasons": {},
+			"retained_outcomes": 2536,
+			"retained_outcome_bytes": 10572,
+			"unretained_final_distinct_outcome": false,
+			"peak_seen_states_per_program": 4096,
+			"peak_state_bytes_per_program": 4195328
+		}
+	]
+}

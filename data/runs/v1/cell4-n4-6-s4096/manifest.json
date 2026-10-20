@@ -1,0 +1,62 @@
+{
+	"dataset_schema_version": 1,
+	"dataset_version": "v1",
+	"status": "completed",
+	"started_at_utc": "2026-10-20T10:28:11.016694+00:00",
+	"finished_at_utc": "2026-10-20T10:28:29.297017+00:00",
+	"engine_version": "0.3.0",
+	"semantics_id": "u4-right-v1",
+	"environment": {
+		"python": "3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)]",
+		"platform": "Windows-11-10.0.26200-SP0",
+		"machine": "AMD64",
+		"processor_reported_by_os": "Intel64 Family 6 Model 126 Stepping 5, GenuineIntel"
+	},
+	"provenance": {
+		"git_commit": "8a7ce03825edaac753f809a62c0ee5b7596bb9bb",
+		"engine_sources_match_commit": true,
+		"source_files_sha256_lf": {
+			"generate.py": "2d336cb57e039308226c24eb194c0b8170a24364a9ad4aced54fcb6e195bec2f",
+			"pyproject.toml": "8390385e7b8df29a82e5b5dacb18a75a6ac2ffc26134fff1300b75c96861f9cb",
+			"src/brainfuck_research/__init__.py": "b2ad39342067f7a6c943c40719da0e4050756174fee3510c46b40c6c34c72ea2",
+			"src/brainfuck_research/analysis.py": "4541c7087bd64a2324e9afa44026860c7bf09c2fd4de3598c6c0fd5ce7601d8c",
+			"src/brainfuck_research/cli.py": "c7457ca98b39de0c9d7bfb4557ef8aa90fff1aa30f2439058097fc02df646101",
+			"src/brainfuck_research/config.py": "65c037a22328f0520d46bbe24cfc89aea8eac304ec9433aaf324d253b0b96a38",
+			"src/brainfuck_research/dataset_cli.py": "642d92c4017a74611866240aff47070ba41cb0e0bb59aeedbe3ce4ac09c7fb48",
+			"src/brainfuck_research/datasets.py": "dce66aab929112550ce2270cb48845b4fbc748b55058006ef94a1c729f16e648",
+			"src/brainfuck_research/enumeration.py": "392ec021e0daf3b85df00bcbc04312ad001477bd509c4e5b676b605bd0b9de0e",
+			"src/brainfuck_research/experiment_cli.py": "d18ad55b79ad5f14e1fc04739c9045b1f62ae210a6d4012bda97da6f60a9ce61",
+			"src/brainfuck_research/experiments.py": "075904149f7b864ca9469a6fc8cedd4a0d435946dfce06f44a66af57e569902f",
+			"src/brainfuck_research/export.py": "fc370406591aab125222a48140ab82679124d95e241642f4f0db459b8d60d1c0",
+			"src/brainfuck_research/interpreter.py": "076c660427f06d3025352fe6211cf9954b7f3982f7d61a8b2273f76c868ca0a4",
+			"src/brainfuck_research/models.py": "a76ffc2ecf58b6cffcf1eba5ebd3d74b9f3c1eaf15d88aee086aa0080b3fbab0",
+			"src/brainfuck_research/syntax.py": "716613820055a8789f2008ad74089983a38cdfb61c3e72078c96f0b72e5fa0ff"
+		},
+		"source_tree_sha256": "4e888f160fd70e56f8875f0a460cead69fafee0ba2442a659d132c2307ae2d5a"
+	},
+	"classification_note": "Completed artifact creation does not imply exhaustive coverage or resolved programs; consult summary coverage and U.",
+	"records": 299008,
+	"artifacts": {
+		"config.json": {
+			"sha256": "c0c82818c8f1a7a3b69eec95d8385ac452e89c48d65ee2dea27c4f2306099a31",
+			"bytes": 346
+		},
+		"summary.json": {
+			"sha256": "35440ca277b5b9126c767f5482d64b812567d1ce94db63115755ec9ed3922e6b",
+			"bytes": 4114
+		},
+		"summary.csv": {
+			"sha256": "a605f730bf310aa5f67c93276d98a7c9f93d026eaefc5fd66e4caa40355894b7",
+			"bytes": 531
+		},
+		"programs.jsonl.gz": {
+			"sha256": "f4f59a8e1e75fcd145847c65cd42ea92680c49a9f44b174a96dd80a7aa617b59",
+			"bytes": 1589414
+		},
+		"programs.csv.gz": {
+			"sha256": "906cc3a19412b4cc311cc4134f9ceff7271becf24d657b3ce8bb0fa91073d60e",
+			"bytes": 1087616
+		}
+	},
+	"reproduce": "python generate.py dataset run --config config.json --output NEW_DIRECTORY"
+}

@@ -1,0 +1,89 @@
+{
+	"note": "Supplemental proofs do not overwrite saved runner classifications or raw U counts.",
+	"proofs": [
+		{
+			"run": "primary-n1-5-s512",
+			"program": "+[>+]",
+			"cell_bits": 8,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "primary-n1-5-s512",
+			"program": "+[>-]",
+			"cell_bits": 8,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "primary-n1-5-s512",
+			"program": "-[>+]",
+			"cell_bits": 8,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "primary-n1-5-s512",
+			"program": "-[>-]",
+			"cell_bits": 8,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "steps4096-n4-6",
+			"program": "+[>+]",
+			"cell_bits": 8,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "steps4096-n4-6",
+			"program": "+[>-]",
+			"cell_bits": 8,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "steps4096-n4-6",
+			"program": "-[>+]",
+			"cell_bits": 8,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "steps4096-n4-6",
+			"program": "-[>-]",
+			"cell_bits": 8,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "cell4-n4-6-s4096",
+			"program": "+[>+]",
+			"cell_bits": 4,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "cell4-n4-6-s4096",
+			"program": "+[>-]",
+			"cell_bits": 4,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "cell4-n4-6-s4096",
+			"program": "-[>+]",
+			"cell_bits": 4,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		},
+		{
+			"run": "cell4-n4-6-s4096",
+			"program": "-[>-]",
+			"cell_bits": 4,
+			"classification": "proven_nonterminating_by_fresh_cell_invariant",
+			"argument": "The initial +/- makes cell zero nonzero. Each iteration moves right to a fresh zero cell and changes it by +/-1 modulo 2^b. That cell is nonzero for b=4 or 8, so ] always jumps back to >. By induction the pointer strictly increases and execution never exits the loop on the right-unbounded tape. A resource stop does not change this model-level argument."
+		}
+	]
+}

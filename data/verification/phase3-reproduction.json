@@ -1,0 +1,18 @@
+{
+	"reproduced": true,
+	"original_run": "primary-n1-5-s512",
+	"record_count": 37448,
+	"matching_artifact_sha256": {
+		"config.json": "b4d89bf759f2e2844d8aef71682568a9037e39b3f23f7bac361d2336c57e76ca",
+		"programs.jsonl.gz": "887864c87fe2b2cfcb7726fecc26907a5b78dcf76552dc599d94349972c5e8e2",
+		"programs.csv.gz": "7b55f532c5c7ab053df8bd74ef7a990369a6d2c11087eff7516a49ae31a6f4af"
+	},
+	"scientific_summaries_equal": true,
+	"original_manifest_sha256": "2e51a52e95b47be2739ab58cbf6d84c1d3a6000c99db4a1f115580be5ed6c43c",
+	"repeat_manifest_sha256": "2a231bf877155f1a6075cae92ea3d3f802bcb5f8d5008673f38a6c0dd8423f8c",
+	"same_source_tree": true,
+	"original_source_commit": "8a7ce03825edaac753f809a62c0ee5b7596bb9bb",
+	"repeat_source_commit": "8a7ce03825edaac753f809a62c0ee5b7596bb9bb",
+	"repeat_finished_at_utc": "2026-10-20T10:31:30.259961+00:00",
+	"note": "Elapsed times and timestamped/environment manifests vary; compressed records use deterministic gzip headers."
+}

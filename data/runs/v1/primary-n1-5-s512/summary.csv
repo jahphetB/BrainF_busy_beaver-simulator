@@ -1,0 +1,6 @@
+length,semantics_id,max_steps,evaluated,not_evaluated,exhaustive,fully_resolved,halted,cycle_detected,step_limit,resource_limit,syntactically_invalid,T,O,M,D,U,T_program,O_program,M_program,elapsed_seconds
+1,legacy-u8-right-v1,512,8,0,True,True,6,0,0,0,2,1,1,2,5,0,>,.,>,0.0008318000036524609
+2,legacy-u8-right-v1,512,64,0,True,True,37,0,0,0,27,2,2,3,19,0,>>,..,>>,0.004017899991595186
+3,legacy-u8-right-v1,512,512,0,True,True,232,2,0,0,278,3,3,4,67,0,>>>,...,>>>,0.041325800004415214
+4,legacy-u8-right-v1,512,4096,0,True,True,1484,30,0,0,2582,512,4,5,228,0,+[+],....,>>>>,0.23801669999375008
+5,legacy-u8-right-v1,512,32768,0,True,False,9638,322,36,0,22772,511,5,6,760,36,++[+],.....,>>>>>,2.094437599997036

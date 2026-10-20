@@ -1,0 +1,82 @@
+{
+	"schema_version": 2,
+	"engine_version": "0.3.0",
+	"semantics_id": "legacy-u8-right-v1",
+	"enumeration": "alphabet_order_prefix",
+	"input_bytes": [],
+	"config": {
+		"lengths": [
+			6
+		],
+		"cell_bits": 8,
+		"max_steps": 512,
+		"max_programs_per_length": null,
+		"max_seconds": 60,
+		"max_distinct_outcomes": 100000,
+		"max_outcome_bytes": 16777216,
+		"limits": {
+			"max_tape_cells": 4096,
+			"max_output_bytes": 65536,
+			"max_seen_states": 100000,
+			"max_state_bytes": 16777216,
+			"max_seconds": null
+		}
+	},
+	"elapsed_seconds": 15.974004100004095,
+	"lengths": [
+		{
+			"length": 6,
+			"coverage": {
+				"total_candidates": 262144,
+				"evaluated_candidates": 262144,
+				"not_evaluated_candidates": 0,
+				"exhaustive": true,
+				"fully_resolved": false,
+				"stop_reason": "completed"
+			},
+			"bounds": "observed_lower_bounds",
+			"elapsed_seconds": 15.973953100008657,
+			"counts": {
+				"halted": 63713,
+				"cycle_detected": 2988,
+				"step_limit": 480,
+				"syntactically_invalid": 194963,
+				"resource_limit": 0
+			},
+			"metrics": {
+				"T": 512,
+				"O": 6,
+				"M": 7,
+				"D": 2500,
+				"U": 480
+			},
+			"records": {
+				"T": {
+					"value": 512,
+					"program": ">++[+]",
+					"ties": 28
+				},
+				"O": {
+					"value": 6,
+					"program": "......",
+					"ties": 1
+				},
+				"M": {
+					"value": 7,
+					"program": ">>>>>>",
+					"ties": 1
+				}
+			},
+			"maximum_steps_per_command": 85.33333333333333,
+			"maximum_output_bytes_per_command": 1.0,
+			"duplicate_halted_programs": 61213,
+			"executed_steps_all_programs": 638153,
+			"resource_reasons": {},
+			"retained_outcomes": 2500,
+			"retained_outcome_bytes": 9896,
+			"unretained_final_distinct_outcome": false,
+			"peak_seen_states_per_program": 512,
+			"peak_state_bytes_per_program": 65664
+		}
+	]
+}

@@ -1,0 +1,3200 @@
+{
+	"step_limit_transitions": [
+		{
+			"length": 5,
+			"new_status": "halted",
+			"count": 32
+		},
+		{
+			"length": 5,
+			"new_status": "step_limit",
+			"count": 4
+		},
+		{
+			"length": 6,
+			"new_status": "cycle_detected",
+			"count": 28
+		},
+		{
+			"length": 6,
+			"new_status": "halted",
+			"count": 364
+		},
+		{
+			"length": 6,
+			"new_status": "step_limit",
+			"count": 88
+		}
+	],
+	"step_limit_programs": [
+		{
+			"program": ">+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": ">-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "<+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "<-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+<[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+.[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 767
+		},
+		{
+			"program": "+[+<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 767
+		},
+		{
+			"program": "+[+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 767
+		},
+		{
+			"program": "+[+]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+[+]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+[+]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+[+]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+[+].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+[+],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+[.+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 767
+		},
+		{
+			"program": "-<[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "-.[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "-[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 767
+		},
+		{
+			"program": "-[-<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 767
+		},
+		{
+			"program": "-[-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 767
+		},
+		{
+			"program": "-[-]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "-[-]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "-[-]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "-[-]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "-[-].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "-[-],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "-[.-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 767
+		},
+		{
+			"program": ".+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": ".-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": ",+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": ",-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": ">>+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">>-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "><+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "><-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">+.[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">+[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ">+[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ">+[<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 771
+		},
+		{
+			"program": ">+[<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 771
+		},
+		{
+			"program": ">+[+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ">+[+]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">+[+]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">+[+]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">+[+]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">+[+].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">+[+],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">+[.+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ">-.[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">-[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ">-[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ">-[<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 771
+		},
+		{
+			"program": ">-[<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 771
+		},
+		{
+			"program": ">-[-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ">-[-]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">-[-]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">-[-]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">-[-]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">-[-].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">-[-],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">-[.-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ">.+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">.-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">,+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ">,-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<>+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<>-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<<+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<<-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<+<[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<+.[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<+[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "<+[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "<+[<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "<+[+<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "<+[+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "<+[+]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<+[+]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<+[+]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<+[+]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<+[+].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<+[+],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<+[.+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "<-<[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<-.[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<-[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "<-[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "<-[<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "<-[-<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "<-[-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "<-[-]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<-[-]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<-[-]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<-[-]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<-[-].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<-[-],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<-[.-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "<.+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<.-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<,+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "<,-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+><[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+>+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+>-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+<<[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+<.[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+<[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+<[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+<[<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+<[+<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+<[+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+<[+]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+<[+]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+<[+]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+<[+]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+<[+].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+<[+],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+<[.+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "++-[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "++[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "++[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "++[<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 765
+		},
+		{
+			"program": "++[+<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 765
+		},
+		{
+			"program": "++[+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 765
+		},
+		{
+			"program": "++[.+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 765
+		},
+		{
+			"program": "+-+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+--[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+.<[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+..[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+.[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+.[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+.[<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+.[+<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+.[+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+.[+]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+.[+]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+.[+]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+.[+]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+.[+].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+.[+],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+.[.+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+,+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+,-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[>>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[><+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[>+<]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 1027
+		},
+		{
+			"program": "+[>++]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>+.]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>+]>",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>+]<",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>+]+",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>+]-",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>+].",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>+],",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>-<]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 1027
+		},
+		{
+			"program": "+[>--]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>-.]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>-]>",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>-]<",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>-]+",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>-]-",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>-].",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>-],",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>.+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>.-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>,+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[>,-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[<>+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1026
+		},
+		{
+			"program": "+[<>-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1026
+		},
+		{
+			"program": "+[<<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[<+<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[<++]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[<+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[<+]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[<+]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[<+]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[<+]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[<+].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[<+],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[<--]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[<.+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[+><]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[+>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[+>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[+<<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[+<+]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+<.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[+<]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+<]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+<]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+<]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+<].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+<],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[++<]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[++-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[++.]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+-+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[+.<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[+.+]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+..]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[+.]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+.]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+.]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+.]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+.].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+.],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[+]>>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]><",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]>+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]>-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]>.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]>,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]<>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]<<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]<+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]<-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]<.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]<,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]+>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]+<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]++",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]+-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]+.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]+,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]->",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]-<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]-+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]--",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]-.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]-,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+].>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+].<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+].+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+].-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+]..",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+].,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+],>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+],<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+],+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+],-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+],.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+],,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[+][]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "+[->+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[->-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[-<-]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[-++]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[--<]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[---]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 686
+		},
+		{
+			"program": "+[--.]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[-.-]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[.>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[.>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[.<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[.+<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[.++]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[.+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[.+]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[.+]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[.+]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[.+]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[.+].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[.+],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "+[.--]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "+[..+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "+[,>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[,>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "+[[+]]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-><[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "->+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "->-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-<<[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-<.[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-<[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-<[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-<[<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-<[-<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-<[-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-<[-]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-<[-]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-<[-]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-<[-]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-<[-].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-<[-],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-<[.-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-++[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-+-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "--+[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "--[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "--[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "--[<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 765
+		},
+		{
+			"program": "--[-<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 765
+		},
+		{
+			"program": "--[-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 765
+		},
+		{
+			"program": "--[.-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 765
+		},
+		{
+			"program": "-.<[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-..[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-.[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-.[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-.[<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-.[-<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-.[-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-.[-]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-.[-]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-.[-]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-.[-]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-.[-].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-.[-],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-.[.-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-,+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-,-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[>>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[><-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[>+<]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 1027
+		},
+		{
+			"program": "-[>++]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>+.]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>+]>",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>+]<",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>+]+",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>+]-",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>+].",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>+],",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>-<]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 1027
+		},
+		{
+			"program": "-[>--]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>-.]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>-]>",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>-]<",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>-]+",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>-]-",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>-].",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>-],",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>.+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>.-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>,+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[>,-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[<>+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1026
+		},
+		{
+			"program": "-[<>-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1026
+		},
+		{
+			"program": "-[<<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[<++]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[<-<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[<--]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[<-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[<-]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[<-]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[<-]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[<-]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[<-].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[<-],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[<.-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[+>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[+>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[+<+]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[++<]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[+++]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 686
+		},
+		{
+			"program": "-[++.]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[+--]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[+.+]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-><]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[->+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[->-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[-<<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[-<-]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-<.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[-<]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-<]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-<]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-<]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-<].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-<],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-+-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[--<]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[--+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[--.]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-.<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[-.-]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-..]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[-.]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-.]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-.]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-.]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-.].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-.],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[-]>>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]><",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]>+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]>-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]>.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]>,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]<>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]<<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]<+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]<-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]<.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]<,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]+>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]+<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]++",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]+-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]+.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]+,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]->",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]-<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]-+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]--",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]-.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]-,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-].>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-].<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-].+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-].-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-]..",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-].,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-],>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-],<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-],+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-],-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-],.",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-],,",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[-][]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "-[.>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[.>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[.<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[.++]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[.-<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[.--]",
+			"from_status": "step_limit",
+			"to_status": "cycle_detected",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "-[.-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[.-]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[.-]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[.-]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[.-]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[.-].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[.-],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "-[..-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 1022
+		},
+		{
+			"program": "-[,>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[,>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": "-[[-]]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".>+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".>-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".<+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".<-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".+<[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".+.[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".+[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ".+[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ".+[<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ".+[+<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ".+[+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ".+[+]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".+[+]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".+[+]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".+[+]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".+[+].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".+[+],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".+[.+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ".-<[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".-.[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".-[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ".-[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ".-[<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ".-[-<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ".-[-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ".-[-]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".-[-]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".-[-]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".-[-]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".-[-].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".-[-],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".-[.-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": "..+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "..-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".,+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ".,-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",>+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",>-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",<+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",<-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",+<[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",+.[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",+[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ",+[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ",+[<+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ",+[+<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ",+[+.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ",+[+]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",+[+]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",+[+]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",+[+]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",+[+].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",+[+],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",+[.+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ",-<[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",-.[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",-[>+]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ",-[>-]",
+			"from_status": "step_limit",
+			"to_status": "step_limit",
+			"steps_at_higher_limit": 4096
+		},
+		{
+			"program": ",-[<-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ",-[-<]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ",-[-.]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ",-[-]>",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",-[-]<",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",-[-]+",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",-[-]-",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",-[-].",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",-[-],",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",-[.-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 768
+		},
+		{
+			"program": ",.+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",.-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",,+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": ",,-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 514
+		},
+		{
+			"program": "[]+[+]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		},
+		{
+			"program": "[]-[-]",
+			"from_status": "step_limit",
+			"to_status": "halted",
+			"steps_at_higher_limit": 513
+		}
+	],
+	"cell_width_transitions": [
+		{
+			"length": 4,
+			"eight_bit_status": "cycle_detected",
+			"four_bit_status": "cycle_detected",
+			"count": 30
+		},
+		{
+			"length": 4,
+			"eight_bit_status": "halted",
+			"four_bit_status": "halted",
+			"count": 1484
+		},
+		{
+			"length": 4,
+			"eight_bit_status": "syntactically_invalid",
+			"four_bit_status": "syntactically_invalid",
+			"count": 2582
+		},
+		{
+			"length": 5,
+			"eight_bit_status": "cycle_detected",
+			"four_bit_status": "cycle_detected",
+			"count": 322
+		},
+		{
+			"length": 5,
+			"eight_bit_status": "halted",
+			"four_bit_status": "halted",
+			"count": 9670
+		},
+		{
+			"length": 5,
+			"eight_bit_status": "step_limit",
+			"four_bit_status": "step_limit",
+			"count": 4
+		},
+		{
+			"length": 5,
+			"eight_bit_status": "syntactically_invalid",
+			"four_bit_status": "syntactically_invalid",
+			"count": 22772
+		},
+		{
+			"length": 6,
+			"eight_bit_status": "cycle_detected",
+			"four_bit_status": "cycle_detected",
+			"count": 3016
+		},
+		{
+			"length": 6,
+			"eight_bit_status": "halted",
+			"four_bit_status": "halted",
+			"count": 64077
+		},
+		{
+			"length": 6,
+			"eight_bit_status": "step_limit",
+			"four_bit_status": "step_limit",
+			"count": 88
+		},
+		{
+			"length": 6,
+			"eight_bit_status": "syntactically_invalid",
+			"four_bit_status": "syntactically_invalid",
+			"count": 194963
+		}
+	],
+	"halted_in_both_models_with_changed_steps": {
+		"4": 2,
+		"5": 34,
+		"6": 398
+	}
+}

@@ -7,9 +7,10 @@ and memory under explicitly defined semantics. It extends the original
 length-four experiment. It does not solve the classical Busy Beaver problem or
 compute exact Kolmogorov complexity.
 
-**Status:** Phases 1 and 2 are implemented and validated. The engine supports
-bounded streaming experiments for lengths 1-7. Publication datasets, expanded
-experiments, the research paper, and the interactive website remain later phases.
+**Status:** Phases 1-3 are complete. Versioned research datasets cover every
+candidate through length six, with explicit unresolved cases and sensitivity
+comparisons. The engine supports bounded enumeration through length seven.
+The research paper and interactive website remain later phases.
 
 ## Run the validated baseline
 
@@ -97,6 +98,9 @@ argument, input handling, and outcome equivalence.
 | `src/brainfuck_research/experiment_cli.py` | Bounded experiment configuration and JSONL export. |
 | `experiments/configs/` | Reproducible experiment settings. |
 | `benchmarks/` | Measured performance, engineering validation, and feasibility pilots. |
+| `src/brainfuck_research/datasets.py` | Versioned compressed CSV/JSON datasets, provenance, and integrity/accounting checks. |
+| `data/runs/v1/` | Four committed research datasets with configurations and manifests. |
+| `data/analysis/v1/` | Verified summaries, witnesses, sensitivity comparisons, and proof evidence. |
 | `tests/` | Semantic, differential, analysis, and CLI tests. |
 | `tests/fixtures/semantics.json` | Hand-derived cases for future Python/JavaScript parity. |
 | `data/historical/` | Original code/README and independently reproduced baseline hashes. |
@@ -135,18 +139,44 @@ are counted separately. Incomplete coverage or unresolved programs produces
 observed lower bounds. Resource limits are not nontermination proofs.
 
 See [the experiment guide](docs/EXPERIMENTS.md) for metric definitions, budgets,
-configuration, and export commands. **61 tests pass**, including the historical
-baseline comparisons. [Measured benchmarks](benchmarks/README.md) show a 3.83x
-core timing ratio versus the archived original on the tested length-four workload;
-streaming also substantially reduces traced Python allocation peaks.
+configuration, and export commands. **77 tests pass**, including the historical
+baseline comparisons. [Phase 2 benchmarks](benchmarks/README.md) recorded a 3.83x
+core timing ratio versus the archived original on that length-four workload;
+those measurements refer to the archived Phase 2 source version.
+
+## Phase 3 datasets and findings
+
+At a 4096-instruction cutoff under the original 8-bit semantics:
+
+| Length | Maximum observed steps | Maximum output bytes | Distinct outcomes | Runner-unresolved cases |
+| --- | ---: | ---: | ---: | ---: |
+| 4 | 512 | 4 | 228 | 0 |
+| 5 | 767 | 255 | 764 | 4 |
+| 6 | 1026 | 510 | 2536 | 88 |
+
+All candidate strings were considered. The four length-five unresolved cases
+have separate structural nontermination proofs; raw classifications are retained.
+The 4-bit sensitivity model changes runtime/output records substantially.
+
+All 897608 saved candidate records across configurations were checked, all 10078
+recorded cycles replayed, and 33 selected maximum witnesses replayed. A complete
+37448-record reproduction matched the saved compressed CSV and JSONL hashes.
+
+```powershell
+python generate.py dataset verify data/runs/v1/primary-n1-5-s512
+python generate.py dataset run --config experiments/configs/phase3-primary-n1-5.json --output output/reproduction/primary-n1-5-s512
+```
+
+See [results and limitations](docs/RESULTS.md), [dataset downloads](data/README.md),
+and [exact reproduction instructions](docs/PHASE_3_REPRODUCIBILITY.md).
 
 ## Current limits and next phase
 
-Exhaustive searches through length four are validated. Lengths 5-7 have only
-bounded benchmark samples so far. Time limits are cooperative, and state/outcome
-byte budgets measure retained payloads rather than total process memory. Pilot
-runtime projections can miss rare expensive programs and do not extrapolate to
-larger step limits. [Phase 3](docs/PHASE_2.md) requires approval before expanding
-the research experiments and publishing versioned datasets.
+Research candidate coverage extends through length six; length seven remains
+deferred. Unresolved executions prevent unrestricted maximum claims. Time limits
+are cooperative, and state/outcome byte budgets measure payload rather than
+total process memory. Only two cell widths and empty input were studied.
+Originality has not been established. [Phase 4](docs/PHASE_3.md) requires approval
+before literature review, publication figures, and the academic report.
 
 There is no website deployment or live URL yet.

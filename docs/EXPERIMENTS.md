@@ -1,5 +1,10 @@
 # Phase 2 experimental engine
 
+For the completed Phase 3 study and versioned datasets, see
+[RESULTS.md](RESULTS.md) and [PHASE_3_REPRODUCIBILITY.md](PHASE_3_REPRODUCIBILITY.md).
+This guide preserves the Phase 2 engine workflow; its saved benchmark/version
+and test-count statements describe that phase.
+
 The default `python generate.py` command still reproduces the original
 100-step length-four baseline. Use the separate `experiment` command for
 streaming searches with resource limits. No third-party dependencies are needed.

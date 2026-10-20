@@ -1,0 +1,302 @@
+{
+	"schema_version": 2,
+	"engine_version": "0.3.0",
+	"semantics_id": "legacy-u8-right-v1",
+	"enumeration": "alphabet_order_prefix",
+	"input_bytes": [],
+	"config": {
+		"lengths": [
+			1,
+			2,
+			3,
+			4,
+			5
+		],
+		"cell_bits": 8,
+		"max_steps": 512,
+		"max_programs_per_length": null,
+		"max_seconds": 60,
+		"max_distinct_outcomes": 100000,
+		"max_outcome_bytes": 16777216,
+		"limits": {
+			"max_tape_cells": 4096,
+			"max_output_bytes": 65536,
+			"max_seen_states": 100000,
+			"max_state_bytes": 16777216,
+			"max_seconds": null
+		}
+	},
+	"elapsed_seconds": 2.378818199998932,
+	"lengths": [
+		{
+			"length": 1,
+			"coverage": {
+				"total_candidates": 8,
+				"evaluated_candidates": 8,
+				"not_evaluated_candidates": 0,
+				"exhaustive": true,
+				"fully_resolved": true,
+				"stop_reason": "completed"
+			},
+			"bounds": "complete_finite_model_results",
+			"elapsed_seconds": 0.0008318000036524609,
+			"counts": {
+				"halted": 6,
+				"cycle_detected": 0,
+				"step_limit": 0,
+				"syntactically_invalid": 2,
+				"resource_limit": 0
+			},
+			"metrics": {
+				"T": 1,
+				"O": 1,
+				"M": 2,
+				"D": 5,
+				"U": 0
+			},
+			"records": {
+				"T": {
+					"value": 1,
+					"program": ">",
+					"ties": 6
+				},
+				"O": {
+					"value": 1,
+					"program": ".",
+					"ties": 1
+				},
+				"M": {
+					"value": 2,
+					"program": ">",
+					"ties": 1
+				}
+			},
+			"maximum_steps_per_command": 1.0,
+			"maximum_output_bytes_per_command": 1.0,
+			"duplicate_halted_programs": 1,
+			"executed_steps_all_programs": 6,
+			"resource_reasons": {},
+			"retained_outcomes": 5,
+			"retained_outcome_bytes": 7,
+			"unretained_final_distinct_outcome": false,
+			"peak_seen_states_per_program": 0,
+			"peak_state_bytes_per_program": 0
+		},
+		{
+			"length": 2,
+			"coverage": {
+				"total_candidates": 64,
+				"evaluated_candidates": 64,
+				"not_evaluated_candidates": 0,
+				"exhaustive": true,
+				"fully_resolved": true,
+				"stop_reason": "completed"
+			},
+			"bounds": "complete_finite_model_results",
+			"elapsed_seconds": 0.004017899991595186,
+			"counts": {
+				"halted": 37,
+				"cycle_detected": 0,
+				"step_limit": 0,
+				"syntactically_invalid": 27,
+				"resource_limit": 0
+			},
+			"metrics": {
+				"T": 2,
+				"O": 2,
+				"M": 3,
+				"D": 19,
+				"U": 0
+			},
+			"records": {
+				"T": {
+					"value": 2,
+					"program": ">>",
+					"ties": 36
+				},
+				"O": {
+					"value": 2,
+					"program": "..",
+					"ties": 1
+				},
+				"M": {
+					"value": 3,
+					"program": ">>",
+					"ties": 1
+				}
+			},
+			"maximum_steps_per_command": 1.0,
+			"maximum_output_bytes_per_command": 1.0,
+			"duplicate_halted_programs": 18,
+			"executed_steps_all_programs": 73,
+			"resource_reasons": {},
+			"retained_outcomes": 19,
+			"retained_outcome_bytes": 36,
+			"unretained_final_distinct_outcome": false,
+			"peak_seen_states_per_program": 1,
+			"peak_state_bytes_per_program": 1
+		},
+		{
+			"length": 3,
+			"coverage": {
+				"total_candidates": 512,
+				"evaluated_candidates": 512,
+				"not_evaluated_candidates": 0,
+				"exhaustive": true,
+				"fully_resolved": true,
+				"stop_reason": "completed"
+			},
+			"bounds": "complete_finite_model_results",
+			"elapsed_seconds": 0.041325800004415214,
+			"counts": {
+				"halted": 232,
+				"cycle_detected": 2,
+				"step_limit": 0,
+				"syntactically_invalid": 278,
+				"resource_limit": 0
+			},
+			"metrics": {
+				"T": 3,
+				"O": 3,
+				"M": 4,
+				"D": 67,
+				"U": 0
+			},
+			"records": {
+				"T": {
+					"value": 3,
+					"program": ">>>",
+					"ties": 216
+				},
+				"O": {
+					"value": 3,
+					"program": "...",
+					"ties": 1
+				},
+				"M": {
+					"value": 4,
+					"program": ">>>",
+					"ties": 1
+				}
+			},
+			"maximum_steps_per_command": 1.0,
+			"maximum_output_bytes_per_command": 1.0,
+			"duplicate_halted_programs": 165,
+			"executed_steps_all_programs": 680,
+			"resource_reasons": {},
+			"retained_outcomes": 67,
+			"retained_outcome_bytes": 160,
+			"unretained_final_distinct_outcome": false,
+			"peak_seen_states_per_program": 3,
+			"peak_state_bytes_per_program": 3
+		},
+		{
+			"length": 4,
+			"coverage": {
+				"total_candidates": 4096,
+				"evaluated_candidates": 4096,
+				"not_evaluated_candidates": 0,
+				"exhaustive": true,
+				"fully_resolved": true,
+				"stop_reason": "completed"
+			},
+			"bounds": "complete_finite_model_results",
+			"elapsed_seconds": 0.23801669999375008,
+			"counts": {
+				"halted": 1484,
+				"cycle_detected": 30,
+				"step_limit": 0,
+				"syntactically_invalid": 2582,
+				"resource_limit": 0
+			},
+			"metrics": {
+				"T": 512,
+				"O": 4,
+				"M": 5,
+				"D": 228,
+				"U": 0
+			},
+			"records": {
+				"T": {
+					"value": 512,
+					"program": "+[+]",
+					"ties": 2
+				},
+				"O": {
+					"value": 4,
+					"program": "....",
+					"ties": 1
+				},
+				"M": {
+					"value": 5,
+					"program": ">>>>",
+					"ties": 1
+				}
+			},
+			"maximum_steps_per_command": 128.0,
+			"maximum_output_bytes_per_command": 1.0,
+			"duplicate_halted_programs": 1256,
+			"executed_steps_all_programs": 6745,
+			"resource_reasons": {},
+			"retained_outcomes": 228,
+			"retained_outcome_bytes": 660,
+			"unretained_final_distinct_outcome": false,
+			"peak_seen_states_per_program": 512,
+			"peak_state_bytes_per_program": 512
+		},
+		{
+			"length": 5,
+			"coverage": {
+				"total_candidates": 32768,
+				"evaluated_candidates": 32768,
+				"not_evaluated_candidates": 0,
+				"exhaustive": true,
+				"fully_resolved": false,
+				"stop_reason": "completed"
+			},
+			"bounds": "observed_lower_bounds",
+			"elapsed_seconds": 2.094437599997036,
+			"counts": {
+				"halted": 9638,
+				"cycle_detected": 322,
+				"step_limit": 36,
+				"syntactically_invalid": 22772,
+				"resource_limit": 0
+			},
+			"metrics": {
+				"T": 511,
+				"O": 5,
+				"M": 6,
+				"D": 760,
+				"U": 36
+			},
+			"records": {
+				"T": {
+					"value": 511,
+					"program": "++[+]",
+					"ties": 2
+				},
+				"O": {
+					"value": 5,
+					"program": ".....",
+					"ties": 1
+				},
+				"M": {
+					"value": 6,
+					"program": ">>>>>",
+					"ties": 1
+				}
+			},
+			"maximum_steps_per_command": 102.2,
+			"maximum_output_bytes_per_command": 1.0,
+			"duplicate_halted_programs": 8878,
+			"executed_steps_all_programs": 66802,
+			"resource_reasons": {},
+			"retained_outcomes": 760,
+			"retained_outcome_bytes": 2600,
+			"unretained_final_distinct_outcome": false,
+			"peak_seen_states_per_program": 512,
+			"peak_state_bytes_per_program": 43947
+		}
+	]
+}

@@ -1,0 +1,2 @@
+length,semantics_id,max_steps,evaluated,not_evaluated,exhaustive,fully_resolved,halted,cycle_detected,step_limit,resource_limit,syntactically_invalid,T,O,M,D,U,T_program,O_program,M_program,elapsed_seconds
+6,legacy-u8-right-v1,512,262144,0,True,False,63713,2988,480,0,194963,512,6,7,2500,480,>++[+],......,>>>>>>,15.973953100008657

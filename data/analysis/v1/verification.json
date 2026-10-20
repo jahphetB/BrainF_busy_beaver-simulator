@@ -1,0 +1,36 @@
+{
+	"dataset_checks": {
+		"primary-n1-5-s512": {
+			"verified": true,
+			"records_checked": 37448,
+			"semantics_id": "legacy-u8-right-v1",
+			"source_commit": "8a7ce03825edaac753f809a62c0ee5b7596bb9bb"
+		},
+		"primary-n6-s512": {
+			"verified": true,
+			"records_checked": 262144,
+			"semantics_id": "legacy-u8-right-v1",
+			"source_commit": "8a7ce03825edaac753f809a62c0ee5b7596bb9bb"
+		},
+		"steps4096-n4-6": {
+			"verified": true,
+			"records_checked": 299008,
+			"semantics_id": "legacy-u8-right-v1",
+			"source_commit": "8a7ce03825edaac753f809a62c0ee5b7596bb9bb"
+		},
+		"cell4-n4-6-s4096": {
+			"verified": true,
+			"records_checked": 299008,
+			"semantics_id": "u4-right-v1",
+			"source_commit": "8a7ce03825edaac753f809a62c0ee5b7596bb9bb"
+		}
+	},
+	"cycle_certificates_by_run": {
+		"primary-n1-5-s512": 354,
+		"primary-n6-s512": 2988,
+		"steps4096-n4-6": 3368,
+		"cell4-n4-6-s4096": 3368
+	},
+	"maximum_witness_replays": 33,
+	"independent_legacy_witness_replays": 24
+}
