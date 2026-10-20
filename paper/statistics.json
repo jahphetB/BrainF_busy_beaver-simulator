@@ -1,0 +1,129 @@
+{
+	"scope": "Descriptive counts conditional on observed halting; no sampling inference.",
+	"input_sha256": {
+		"summary.csv": "958e0d7becb525d3b48b481f947f6ff04652f8ebf6cb679c7f3c643e0cadb887",
+		"runtime-output.csv": "4ca821a88594e249a41312144831943058dba1e0b4f8f9247aab304d8500b222"
+	},
+	"rows": [
+		{
+			"run": "primary-n1-5-s512",
+			"length": 1,
+			"halted": 6,
+			"halted_within_n_steps": 6,
+			"halted_within_n_steps_percent": 100.0,
+			"halted_with_zero_output": 5,
+			"distinct_outcomes": 5,
+			"halted_programs_per_outcome": 1.2
+		},
+		{
+			"run": "primary-n1-5-s512",
+			"length": 2,
+			"halted": 37,
+			"halted_within_n_steps": 37,
+			"halted_within_n_steps_percent": 100.0,
+			"halted_with_zero_output": 26,
+			"distinct_outcomes": 19,
+			"halted_programs_per_outcome": 1.9474
+		},
+		{
+			"run": "primary-n1-5-s512",
+			"length": 3,
+			"halted": 232,
+			"halted_within_n_steps": 232,
+			"halted_within_n_steps_percent": 100.0,
+			"halted_with_zero_output": 139,
+			"distinct_outcomes": 67,
+			"halted_programs_per_outcome": 3.4627
+		},
+		{
+			"run": "primary-n1-5-s512",
+			"length": 4,
+			"halted": 1484,
+			"halted_within_n_steps": 1482,
+			"halted_within_n_steps_percent": 99.8652,
+			"halted_with_zero_output": 774,
+			"distinct_outcomes": 228,
+			"halted_programs_per_outcome": 6.5088
+		},
+		{
+			"run": "primary-n1-5-s512",
+			"length": 5,
+			"halted": 9638,
+			"halted_within_n_steps": 9634,
+			"halted_within_n_steps_percent": 99.9585,
+			"halted_with_zero_output": 4446,
+			"distinct_outcomes": 760,
+			"halted_programs_per_outcome": 12.6816
+		},
+		{
+			"run": "primary-n6-s512",
+			"length": 6,
+			"halted": 63713,
+			"halted_within_n_steps": 63641,
+			"halted_within_n_steps_percent": 99.887,
+			"halted_with_zero_output": 26496,
+			"distinct_outcomes": 2500,
+			"halted_programs_per_outcome": 25.4852
+		},
+		{
+			"run": "steps4096-n4-6",
+			"length": 4,
+			"halted": 1484,
+			"halted_within_n_steps": 1482,
+			"halted_within_n_steps_percent": 99.8652,
+			"halted_with_zero_output": 774,
+			"distinct_outcomes": 228,
+			"halted_programs_per_outcome": 6.5088
+		},
+		{
+			"run": "steps4096-n4-6",
+			"length": 5,
+			"halted": 9670,
+			"halted_within_n_steps": 9634,
+			"halted_within_n_steps_percent": 99.6277,
+			"halted_with_zero_output": 4468,
+			"distinct_outcomes": 764,
+			"halted_programs_per_outcome": 12.6571
+		},
+		{
+			"run": "steps4096-n4-6",
+			"length": 6,
+			"halted": 64077,
+			"halted_within_n_steps": 63641,
+			"halted_within_n_steps_percent": 99.3196,
+			"halted_with_zero_output": 26694,
+			"distinct_outcomes": 2536,
+			"halted_programs_per_outcome": 25.267
+		},
+		{
+			"run": "cell4-n4-6-s4096",
+			"length": 4,
+			"halted": 1484,
+			"halted_within_n_steps": 1482,
+			"halted_within_n_steps_percent": 99.8652,
+			"halted_with_zero_output": 774,
+			"distinct_outcomes": 228,
+			"halted_programs_per_outcome": 6.5088
+		},
+		{
+			"run": "cell4-n4-6-s4096",
+			"length": 5,
+			"halted": 9670,
+			"halted_within_n_steps": 9634,
+			"halted_within_n_steps_percent": 99.6277,
+			"halted_with_zero_output": 4468,
+			"distinct_outcomes": 764,
+			"halted_programs_per_outcome": 12.6571
+		},
+		{
+			"run": "cell4-n4-6-s4096",
+			"length": 6,
+			"halted": 64077,
+			"halted_within_n_steps": 63641,
+			"halted_within_n_steps_percent": 99.3196,
+			"halted_with_zero_output": 26694,
+			"distinct_outcomes": 2536,
+			"halted_programs_per_outcome": 25.267
+		}
+	]
+}

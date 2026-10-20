@@ -4,3 +4,6 @@
 *.json text eol=lf
 *.csv text eol=lf
 *.gz binary
+paper/*.bib text eol=lf
+paper/requirements.txt text eol=lf
+paper/figures/*.svg text eol=lf
